@@ -1,0 +1,71 @@
+/* Styling untuk kartu ulasan dengan gambar */
+.review-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.review-card h3 {
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.review-content {
+    margin-top: 1rem;
+}
+
+.review-card p {
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff5722;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #ff7043;
+}
+
+/* Responsif untuk mobile */
+@media screen and (max-width: 768px) {
+    .review-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .product-image {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
