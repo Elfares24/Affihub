@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - AutomarketHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AutomarketHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="products.html" class="active">Produk</a></li>
+                    <li><a href="reviews.html">Ulasan</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="product-hero">
+        <div class="container">
+            <h2>Produk Terbaik untuk Bisnis Online Anda</h2>
+            <p>Temukan tools, software, dan kursus premium untuk membantu bisnis online Anda berkembang pesat</p>
+            
+            <div class="search-filter">
+                <div class="search-box">
+                    <input type="text" placeholder="Cari produk...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-options">
+                    <select id="categoryFilter">
+                        <option value="all">Semua Kategori</option>
+                        <option value="course">Kursus</option>
+                        <option value="software">Software</option>
+                        <option value="tools">Tools</option>
+                    </select>
+                    <select id="priceFilter">
+                        <option value="all">Semua Harga</option>
+                        <option value="free">Gratis</option>
+                        <option value="paid">Berbayar</option>
+                        <option value="subscription">Langganan</option>
+                    </select>
+                    <select id="sortFilter">
+                        <option value="popular">Paling Populer</option>
+                        <option value="newest">Terbaru</option>
+                        <option value="price-low">Harga: Rendah ke Tinggi</option>
+                        <option value="price-high">Harga: Tinggi ke Rendah</option>
+                        <option value="rating">Rating Tertinggi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div class="container">
+            <h2>Produk Unggulan</h2>
+            <div class="product-grid">
+                <!-- Produk 1 -->
+                <div class="product-card">
+                    <div class="product-badge bestseller">Terlaris</div>
+                    <div class="product-image">
+                        <img src="images/product1.jpg" alt="AI Content Creator Pro">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Software</div>
+                        <h3>AI Content Creator Pro</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="rating-count">4.5 (128 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 1.499.000</span>
+                            <span class="old-price">Rp 2.999.000</span>
+                            <span class="discount">-50%</span>
+                        </div>
+                        <p class="product-description">
+                            Software AI untuk membuat konten blog, sosial media, dan email marketing secara otomatis dengan kualitas tinggi.
+                        </p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-clock"></i> Akses Seumur Hidup</span>
+                            <span><i class="fas fa-download"></i> 5.2K+ Pengguna</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/xyz123/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 2 -->
+                <div class="product-card">
+                    <div class="product-badge new">Baru</div>
+                    <div class="product-image">
+                        <img src="images/product2.jpg" alt="Digital Marketing Mastery">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Kursus</div>
+                        <h3>Digital Marketing Mastery</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="rating-count">5.0 (87 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 2.750.000</span>
+                            <span class="old-price">Rp 3.500.000</span>
+                            <span class="discount">-21%</span>
+                        </div>
+                        <p class="product-description">
+                            Kursus lengkap digital marketing dari dasar hingga mahir, termasuk SEO, SEM, Social Media, dan Email Marketing.
+                        </p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-film"></i> 120+ Video</span>
+                            <span><i class="fas fa-certificate"></i> Sertifikat</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/abc456/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 3 -->
+                <div class="product-card">
+                    <div class="product-badge hot">Hot</div>
+                    <div class="product-image">
+                        <img src="images/product3.jpg" alt="Funnel Builder X">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Tools</div>
+                        <h3>Funnel Builder X</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <span class="rating-count">4.0 (156 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 997.000</span>
+                            <span class="old-price">Rp 1.997.000</span>
+                            <span class="discount">-50%</span>
+                        </div>
+                        <p class="product-description">
+                            Platform all-in-one untuk membuat sales funnel, landing page, dan webinar yang mengkonversi dengan baik.
+                        </p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-sync-alt"></i> Update Rutin</span>
+                            <span><i class="fas fa-headset"></i> Support 24/7</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/def789/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-categories">
+        <div class="container">
+            <h2>Kategori Produk</h2>
+            <div class="category-grid">
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Software</h3>
+                    <p>24 Produk</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Kursus</h3>
+                    <p>18 Produk</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools</h3>
+                    <p>15 Produk</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Marketing</h3>
+                    <p>12 Produk</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Desain</h3>
+                    <p>9 Produk</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Tools</h3>
+                    <p>7 Produk</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="all-products">
+        <div class="container">
+            <h2>Semua Produk</h2>
+            <div class="product-grid">
+                <!-- Produk 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product4.jpg" alt="Email Marketing Suite">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Tools</div>
+                        <h3>Email Marketing Suite</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="rating-count">4.5 (92 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 799.000</span>
+                            <span class="old-price">Rp 1.299.000</span>
+                            <span class="discount">-38%</span>
+                        </div>
+                        <p class="product-description">
+                            Platform email marketing dengan template siap pakai dan fitur otomatisasi untuk meningkatkan konversi.
+                        </p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-envelope"></i> 10K Email/bulan</span>
+                            <span><i class="fas fa-users"></i> Unlimited Subscribers</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/ghi101/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product5.jpg" alt="SEO Mastery">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Kursus</div>
+                        <h3>SEO Mastery</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <span class="rating-count">4.0 (75 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 1.250.000</span>
+                            <span class="old-price">Rp 1.750.000</span>
+                            <span class="discount">-29%</span>
+                        </div>
+                        <p class="product-description">
+                            Kursus SEO komprehensif untuk meningkatkan peringkat website Anda di mesin pencari dan mendapatkan traffic organik.
+                        </p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-film"></i> 80+ Video</span>
+                            <span><i class="fas fa-file-alt"></i> 15+ Worksheet</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/jkl202/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product6.jpg" alt="Social Media Automation">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Software</div>
+                        <h3>Social Media Automation</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="rating-count">5.0 (63 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 899.000</span>
+                            <span class="old-price">Rp 1.499.000</span>
+                            <span class="discount">-40%</span>
+                        </div>
+                        <p class="product-description">
+                            Software untuk mengotomatisasi posting dan engagement di berbagai platform media sosial sekaligus.
+                        </p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-share-alt"></i> 10+ Platform</span>
+                            <span><i class="fas fa-calendar-alt"></i> Scheduling</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/mno303/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 7 -->
+                <div class="product-card">
+                    <div class="product-badge free">Gratis</div>
+                    <div class="product-image">
+                        <img src="images/product7.jpg" alt="Affiliate Marketing Starter Kit">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Tools</div>
+                        <h3>Affiliate Marketing Starter Kit</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <span class="rating-count">4.0 (210 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Gratis</span>
+                        </div>
+                        <p class="product-description">
+                            Toolkit lengkap untuk memulai bisnis affiliate marketing, termasuk template, checklist, dan panduan.
+                        </p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-file-download"></i> 15+ Template</span>
+                            <span><i class="fas fa-book"></i> 50+ Halaman</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/pqr404/0" class="btn-primary" target="_blank">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product8.jpg" alt="Webinar Platform Pro">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Software</div>
+                        <h3>Webinar Platform Pro</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <span class="rating-count">3.5 (48 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 1.997.000</span>
+                            <span class="old-price">Rp 2.997.000</span>
+                            <span class="discount">-33%</span>
+                        </div>
+                        <p class="product-description">
+                            Platform webinar dengan fitur otomatisasi, integrasi pembayaran, dan analitik untuk meningkatkan konversi.
+                        </p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-users"></i> 500 Peserta</span>
+                            <span><i class="fas fa-video"></i> HD Streaming</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/stu505/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 9 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product9.jpg" alt="Copywriting Mastery">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Kursus</div>
+                        <h3>Copywriting Mastery</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="rating-count">4.5 (112 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 1.499.000</span>
+                            <span class="old-price">Rp 1.999.000</span>
+                            <span class="discount">-25%</span>
+                        </div>
+                        <p class="product-description">
+                            Kursus copywriting untuk meningkatkan kemampuan menulis konten yang menjual dan mengkonversi.
+                        </p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-film"></i> 60+ Video</span>
+                            <span><i class="fas fa-file-alt"></i> 25+ Template</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/vwx606/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="next">Selanjutnya &raquo;</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ingin Menjadi Affiliate?</h2>
+                <p>Bergabunglah dengan program affiliate kami dan dapatkan komisi hingga 70% dari setiap penjualan yang Anda hasilkan.</p>
+                <a href="affiliate.html" class="btn-primary">Daftar Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AutomarketHub</h3>
+                    <p>Platform affiliate marketing terpercaya yang menghubungkan produk berkualitas dengan pembeli potensial.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="reviews.html">Ulasan</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Kebijakan</h3>
+                    <ul>
+                        <li><a href="privacy.html">Kebijakan Privasi</a></li>
+                        <li><a href="terms.html">Syarat & Ketentuan</a></li>
+                        <li><a href="affiliate-policy.html">Kebijakan Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Dapatkan update terbaru tentang produk dan promo spesial.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Anda" required>
+                        <button type="submit">Langganan</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 AutomarketHub. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
