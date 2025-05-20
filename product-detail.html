@@ -3,322 +3,472 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UltraEmailPro - Platform email marketing terbaik dengan fitur lengkap untuk automasi email, segmentasi, dan pelaporan yang powerful.">
-    <title>UltraEmailPro - Detail Produk | AffiHub</title>
-    <link rel="stylesheet" href="nav-styles.css">
-    <link rel="stylesheet" href="product-image-styles.css">
-    <link rel="stylesheet" href="fixed-product-detail-styles.css">
-<script src="fixed-product-detail-script.js">
-</script>
+    <title>AI Content Creator Pro - AutomarketHub</title>
+    <link rel="stylesheet" href="product-detail-styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar">
+    <header>
         <div class="container">
-            <div class="navbar-content">
-                <a href="index.html" class="logo">AffiHub</a>
-                <button class="hamburger" id="hamburger">☰</button>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="tentang.html">Tentang Kami</a></li>
-                    <li><a href="ulasan.html">Ulasan Produk</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="kontak.html">Kontak</a></li>
-                </ul>
+            <div class="logo">
+                <h1>AutomarketHub</h1>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="products.html" class="active">Produk</a></li>
+                    <li><a href="reviews.html">Ulasan</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <div class="breadcrumb">
+    <section class="breadcrumb">
         <div class="container">
-            <a href="index.html">Beranda</a> &gt; 
-            <a href="ulasan.html">Ulasan Produk</a> &gt; 
-            <span>UltraEmailPro</span>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="products.html">Produk</a></li>
+                <li><a href="products.html?category=software">Software</a></li>
+                <li>AI Content Creator Pro</li>
+            </ul>
         </div>
-    </div>
+    </section>
 
-    <section class="product-header">
+    <section class="product-detail">
         <div class="container">
-            <div class="product-header-content">
-                <div class="product-image-container">
-                    <img src="assets/images/email-marketing.jpg" alt="UltraEmailPro" class="product-detail-image">
-                    <div class="product-rating">
-                        <span class="stars">★★★★☆</span>
-                        <span class="rating-text">4.5/5</span>
+            <div class="product-grid">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="images/ai-content-creator-pro-main.jpg" alt="AI Content Creator Pro" id="mainImage">
+                        <div class="product-badge bestseller">Terlaris</div>
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="images/ai-content-creator-pro-1.jpg" alt="AI Content Creator Pro Screenshot 1" class="thumbnail" onclick="changeImage(this)">
+                        <img src="images/ai-content-creator-pro-2.jpg" alt="AI Content Creator Pro Screenshot 2" class="thumbnail" onclick="changeImage(this)">
+                        <img src="images/ai-content-creator-pro-3.jpg" alt="AI Content Creator Pro Screenshot 3" class="thumbnail" onclick="changeImage(this)">
+                        <img src="images/ai-content-creator-pro-4.jpg" alt="AI Content Creator Pro Screenshot 4" class="thumbnail" onclick="changeImage(this)">
                     </div>
                 </div>
-                <div class="product-header-info">
-                    <h1>UltraEmailPro</h1>
-                    <p class="product-tagline">Solusi Email Marketing Lengkap</p>
-                    <div class="product-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Vendor:</span>
-                            <span class="meta-value">JVZoo</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Kategori:</span>
-                            <span class="meta-value">Email Marketing</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Harga:</span>
-                            <span class="meta-value">$47/bulan</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Terakhir Diupdate:</span>
-                            <span class="meta-value">15 Mei 2025</span>
+                
+                <div class="product-info">
+                    <div class="product-header">
+                        <div class="product-category">Software</div>
+                        <h1>AI Content Creator Pro</h1>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="rating-count">4.5 (128 ulasan)</span>
                         </div>
                     </div>
-                    <div class="product-cta">
-                        <a href="#" class="primary-button">Lihat di JVZoo</a>
-                        <a href="#" class="secondary-button">Dapatkan Diskon 20%</a>
-                        <div class="pros-cons">
-  <div class="pros">
-    <h3>Kelebihan</h3>
-    <ul>
-      <li>Antarmuka yang intuitif dan mudah digunakan</li>
-      <li>Fitur segmentasi pelanggan yang canggih</li>
-      <li>Template email yang responsif</li>
-      <li>Analitik yang komprehensif</li>
-      <li>Integrasi dengan berbagai platform</li>
-    </ul>
-  </div>
-  <div class="cons">
-    <h3>Kekurangan</h3>
-    <ul>
-      <li>Harga lebih tinggi dibanding beberapa kompetitor</li>
-      <li>Kurva pembelajaran yang cukup untuk pemula</li>
-      <li>Beberapa fitur lanjutan memerlukan paket premium</li>
-    </ul>
-  </div>
+                    
+                    <div class="product-price">
+                        <span class="current-price">Rp 1.499.000</span>
+                        <span class="old-price">Rp 2.999.000</span>
+                        <span class="discount">-50%</span>
+                    </div>
+                    
+                    <div class="product-short-desc">
+                        <p>Software AI untuk membuat konten blog, sosial media, dan email marketing secara otomatis dengan kualitas tinggi. Hemat waktu dan tingkatkan produktivitas Anda dengan teknologi AI terkini.</p>
+                    </div>
+                    
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Akses Seumur Hidup</span>
                         </div>
-                        
+                        <div class="meta-item">
+                            <i class="fas fa-download"></i>
+                            <span>5.2K+ Pengguna</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <span>Update Gratis</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-headset"></i>
+                            <span>Support Premium</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <a href="https://warriorplus.com/o2/a/xyz123/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        <button class="btn-wishlist"><i class="far fa-heart"></i> Wishlist</button>
+                        <div class="share-buttons">
+                            <span>Bagikan:</span>
+                            <a href="#" class="share-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="share-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="product-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Garansi 30 Hari</h4>
+                                <p>Jaminan uang kembali jika tidak puas</p>
+                            </div>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-lock"></i>
+                            <div>
+                                <h4>Pembayaran Aman</h4>
+                                <p>Transaksi terenkripsi & terjamin</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="product-content">
+    <section class="product-tabs">
         <div class="container">
-            <div class="product-tabs">
-                <button class="tab-button active" data-tab="overview">Ikhtisar</button>
-                <button class="tab-button" data-tab="features">Fitur</button>
-                <button class="tab-button" data-tab="pricing">Harga</button>
-                <button class="tab-button" data-tab="review">Ulasan</button>
-                <button class="tab-button" data-tab="alternatives">Alternatif</button>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'description')">Deskripsi</button>
+                <button class="tab-btn" onclick="openTab(event, 'features')">Fitur</button>
+                <button class="tab-btn" onclick="openTab(event, 'reviews')">Ulasan</button>
+                <button class="tab-btn" onclick="openTab(event, 'faq')">FAQ</button>
             </div>
-
-            <div class="tab-content active" id="overview">
-                <h2>Ikhtisar Produk</h2>
-                <p>UltraEmailPro adalah platform email marketing komprehensif yang dirancang untuk membantu bisnis dari segala ukuran mengotomatiskan dan mengoptimalkan kampanye email mereka. Dengan antarmuka yang intuitif dan fitur yang kuat, UltraEmailPro menawarkan solusi lengkap untuk kebutuhan pemasaran email Anda.</p>
+            
+            <div id="description" class="tab-content active">
+                <h2>Deskripsi Produk</h2>
+                <p>AI Content Creator Pro adalah software revolusioner yang menggunakan teknologi kecerdasan buatan terkini untuk membantu Anda membuat konten berkualitas tinggi dalam waktu singkat. Dirancang khusus untuk pemilik bisnis online, pemasar, dan content creator, software ini dapat menghasilkan berbagai jenis konten seperti artikel blog, caption media sosial, email marketing, dan banyak lagi.</p>
                 
-                <p>Platform ini memungkinkan Anda membuat, mengirim, dan melacak kampanye email dengan mudah. Anda dapat membuat email yang menarik secara visual menggunakan editor drag-and-drop, mensegmentasi daftar pelanggan Anda berdasarkan berbagai kriteria, dan mengotomatiskan pengiriman email berdasarkan perilaku pelanggan.</p>
+                <p>Dengan AI Content Creator Pro, Anda dapat:</p>
+                <ul>
+                    <li>Membuat artikel blog SEO-friendly dengan panjang 500-2000 kata dalam hitungan menit</li>
+                    <li>Menghasilkan caption media sosial yang menarik untuk meningkatkan engagement</li>
+                    <li>Membuat email marketing yang mengkonversi untuk kampanye Anda</li>
+                    <li>Menghasilkan deskripsi produk yang menjual untuk toko online Anda</li>
+                    <li>Membuat konten dalam berbagai bahasa termasuk Bahasa Indonesia dan Inggris</li>
+                </ul>
                 
-                <div class="pros-cons">
-                    <div class="pros">
-                        <h3>Kelebihan</h3>
-                        <ul>
-                            <li>Antarmuka pengguna yang intuitif dan mudah digunakan</li>
-                            <li>Fitur otomatisasi email yang kuat</li>
-                            <li>Template email responsif yang menarik</li>
-                            <li>Analitik dan pelaporan yang komprehensif</li>
-                            <li>Integrasi dengan berbagai platform dan tools</li>
-                        </ul>
-                    </div>
-                    <div class="cons">
-                        <h3>Kekurangan</h3>
-                        <ul>
-                            <li>Harga relatif lebih tinggi dibanding kompetitor</li>
-                            <li>Beberapa fitur lanjutan memerlukan paket premium</li>
-                            <li>Kurva pembelajaran yang cukup untuk fitur lanjutan</li>
-                            <li>Dukungan pelanggan terkadang lambat merespons</li>
-                        </ul>
-                    </div>
+                <p>Software ini menggunakan model AI yang telah dilatih dengan jutaan artikel berkualitas tinggi, sehingga mampu menghasilkan konten yang tidak hanya unik tetapi juga relevan dengan topik yang Anda inginkan. Dengan antarmuka yang intuitif dan mudah digunakan, bahkan pemula pun dapat menghasilkan konten profesional dalam waktu singkat.</p>
+                
+                <div class="highlight-box">
+                    <h3>Mengapa AI Content Creator Pro?</h3>
+                    <p>Dalam era digital yang serba cepat, konten berkualitas adalah kunci untuk menarik dan mempertahankan audiens. Namun, membuat konten secara konsisten bisa menjadi tugas yang memakan waktu dan tenaga. AI Content Creator Pro hadir sebagai solusi untuk membantu Anda menghasilkan konten berkualitas tinggi dengan cepat, sehingga Anda dapat fokus pada aspek strategis bisnis Anda.</p>
                 </div>
+                
+                <h3>Spesifikasi Teknis</h3>
+                <ul>
+                    <li><strong>Format:</strong> Software berbasis web (tidak perlu instalasi)</li>
+                    <li><strong>Kompatibilitas:</strong> Berfungsi di semua browser modern</li>
+                    <li><strong>Bahasa yang Didukung:</strong> Indonesia, Inggris, dan 10+ bahasa lainnya</li>
+                    <li><strong>Jumlah Konten:</strong> Tidak terbatas</li>
+                    <li><strong>Update:</strong> Otomatis dan gratis seumur hidup</li>
+                </ul>
             </div>
-
-            <div class="tab-content" id="features">
+            
+            <div id="features" class="tab-content">
                 <h2>Fitur Utama</h2>
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <div class="feature-icon">📧</div>
-                        <div class="feature-info">
-                            <h3>Editor Drag-and-Drop</h3>
-                            <p>Buat email yang menarik secara visual tanpa pengetahuan coding dengan editor intuitif yang mudah digunakan.</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Generator Artikel Blog</h3>
+                            <p>Buat artikel blog lengkap dengan judul, subheading, dan konten yang terstruktur dengan baik. Hasilkan artikel SEO-friendly dengan panjang 500-2000 kata dalam hitungan menit.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🔄</div>
-                        <div class="feature-info">
-                            <h3>Otomatisasi Email</h3>
-                            <p>Buat alur kerja otomatis berdasarkan perilaku pelanggan, seperti pendaftaran, pembelian, atau interaksi dengan email sebelumnya.</p>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Creator Caption Media Sosial</h3>
+                            <p>Hasilkan caption menarik untuk Instagram, Facebook, Twitter, dan platform media sosial lainnya. Lengkap dengan hashtag yang relevan dan call-to-action yang efektif.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">👥</div>
-                        <div class="feature-info">
-                            <h3>Segmentasi Lanjutan</h3>
-                            <p>Segmentasi daftar pelanggan berdasarkan demografi, perilaku, preferensi, dan banyak kriteria lainnya.</p>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Template Email Marketing</h3>
+                            <p>Akses puluhan template email marketing yang telah terbukti mengkonversi. Sesuaikan dengan mudah untuk kampanye Anda dan tingkatkan open rate dan click-through rate.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">📊</div>
-                        <div class="feature-info">
-                            <h3>Analitik Komprehensif</h3>
-                            <p>Lacak dan analisis performa kampanye email dengan metrik seperti open rate, click-through rate, dan konversi.</p>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Generator Deskripsi Produk</h3>
+                            <p>Buat deskripsi produk yang menjual untuk toko online Anda. Fokus pada manfaat dan fitur utama untuk meningkatkan konversi penjualan.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🔌</div>
-                        <div class="feature-info">
-                            <h3>Integrasi</h3>
-                            <p>Integrasi mulus dengan CRM, platform e-commerce, dan tools bisnis lainnya untuk pengalaman yang terpadu.</p>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Multi-Bahasa</h3>
+                            <p>Hasilkan konten dalam berbagai bahasa termasuk Bahasa Indonesia, Inggris, dan 10+ bahasa lainnya untuk menjangkau audiens global.</p>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">📱</div>
-                        <div class="feature-info">
-                            <h3>Responsif Mobile</h3>
-                            <p>Semua template email dioptimalkan untuk tampilan yang sempurna di perangkat mobile, tablet, dan desktop.</p>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Penjadwalan Konten</h3>
+                            <p>Rencanakan dan jadwalkan konten Anda dengan kalender konten terintegrasi. Pastikan konsistensi posting untuk meningkatkan engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bonus-section">
+                    <h3>Bonus Eksklusif</h3>
+                    <div class="bonus-items">
+                        <div class="bonus-item">
+                            <div class="bonus-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="bonus-content">
+                                <h4>E-Book: Content Marketing Mastery</h4>
+                                <p>Panduan lengkap tentang strategi content marketing yang efektif untuk bisnis online.</p>
+                                <span class="bonus-value">Nilai: Rp 499.000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bonus-item">
+                            <div class="bonus-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="bonus-content">
+                                <h4>Video Training: AI Content Optimization</h4>
+                                <p>10 video tutorial tentang cara mengoptimalkan konten AI untuk SEO dan konversi.</p>
+                                <span class="bonus-value">Nilai: Rp 799.000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bonus-item">
+                            <div class="bonus-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="bonus-content">
+                                <h4>Template Pack: 50+ Content Templates</h4>
+                                <p>Koleksi 50+ template konten siap pakai untuk berbagai kebutuhan marketing.</p>
+                                <span class="bonus-value">Nilai: Rp 399.000</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="tab-content" id="pricing">
-                <h2>Paket Harga</h2>
-                <div class="pricing-table">
-                    <div class="pricing-plan">
-                        <div class="plan-header">
-                            <h3>Starter</h3>
-                            <div class="plan-price">$27<span>/bulan</span></div>
-                        </div>
-                        <div class="plan-features">
-                            <ul>
-                                <li>Hingga 2,500 kontak</li>
-                                <li>Kampanye email tak terbatas</li>
-                                <li>Template dasar</li>
-                                <li>Otomatisasi dasar</li>
-                                <li>Analitik standar</li>
-                                <li>Email support</li>
-                            </ul>
-                        </div>
-                        <div class="plan-cta">
-                            <a href="#" class="plan-button">Mulai Sekarang</a>
-                        </div>
-                    </div>
-                    <div class="pricing-plan featured">
-                        <div class="plan-badge">Paling Populer</div>
-                        <div class="plan-header">
-                            <h3>Professional</h3>
-                            <div class="plan-price">$47<span>/bulan</span></div>
-                        </div>
-                        <div class="plan-features">
-                            <ul>
-                                <li>Hingga 10,000 kontak</li>
-                                <li>Kampanye email tak terbatas</li>
-                                <li>Template premium</li>
-                                <li>Otomatisasi lanjutan</li>
-                                <li>Analitik komprehensif</li>
-                                <li>Prioritas email & chat support</li>
-                                <li>Segmentasi lanjutan</li>
-                                <li>A/B testing</li>
-                            </ul>
-                        </div>
-                        <div class="plan-cta">
-                            <a href="#" class="plan-button">Mulai Sekarang</a>
-                        </div>
-                    </div>
-                    <div class="pricing-plan">
-                        <div class="plan-header">
-                            <h3>Enterprise</h3>
-                            <div class="plan-price">$97<span>/bulan</span></div>
-                        </div>
-                        <div class="plan-features">
-                            <ul>
-                                <li>Hingga 50,000 kontak</li>
-                                <li>Kampanye email tak terbatas</li>
-                                <li>Template kustom</li>
-                                <li>Otomatisasi tingkat lanjut</li>
-                                <li>Analitik & reporting kustom</li>
-                                <li>Dedicated account manager</li>
-                                <li>API akses</li>
-                                <li>White labeling</li>
-                            </ul>
-                        </div>
-                        <div class="plan-cta">
-                            <a href="#" class="plan-button">Mulai Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-content" id="review">
+            
+            <div id="reviews" class="tab-content">
                 <h2>Ulasan Pengguna</h2>
-                <div class="user-reviews">
-                    <div class="review-item">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">AS</div>
-                            <div class="reviewer-name">Andi Susanto</div>
-                            <div class="review-date">10 Mei 2025</div>
+                
+                <div class="review-summary">
+                    <div class="rating-average">
+                        <span class="rating-number">4.5</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <div class="review-rating">★★★★★</div>
-                        <div class="review-text">
-                            <p>UltraEmailPro telah mengubah cara saya melakukan email marketing. Antarmuka yang intuitif dan fitur otomatisasi yang kuat membuat saya dapat menghemat waktu dan meningkatkan hasil kampanye email saya.</p>
-                        </div>
+                        <span class="total-reviews">Berdasarkan 128 ulasan</span>
                     </div>
-                    <div class="review-item">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">DP</div>
-                            <div class="reviewer-name">Dewi Pratiwi</div>
-                            <div class="review-date">5 Mei 2025</div>
+                    
+                    <div class="rating-bars">
+                        <div class="rating-bar-item">
+                            <span class="rating-label">5 Bintang</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 70%"></div>
+                            </div>
+                            <span class="rating-percent">70%</span>
                         </div>
-                        <div class="review-rating">★★★★☆</div>
-                        <div class="review-text">
-                            <p>Saya sangat menyukai template yang disediakan dan kemudahan penggunaan platform ini. Satu-satunya kekurangan adalah harganya yang cukup mahal untuk bisnis kecil seperti saya.</p>
+                        <div class="rating-bar-item">
+                            <span class="rating-label">4 Bintang</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 20%"></div>
+                            </div>
+                            <span class="rating-percent">20%</span>
                         </div>
-                    </div>
-                    <div class="review-item">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">BW</div>
-                            <div class="reviewer-name">Budi Wicaksono</div>
-                            <div class="review-date">28 April 2025</div>
+                        <div class="rating-bar-item">
+                            <span class="rating-label">3 Bintang</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 7%"></div>
+                            </div>
+                            <span class="rating-percent">7%</span>
                         </div>
-                        <div class="review-rating">★★★☆☆</div>
-                        <div class="review-text">
-                            <p>Fitur-fiturnya bagus, tapi saya mengalami beberapa masalah dengan dukungan pelanggan yang lambat merespons. Selain itu, beberapa fitur lanjutan yang saya butuhkan hanya tersedia di paket yang lebih mahal.</p>
+                        <div class="rating-bar-item">
+                            <span class="rating-label">2 Bintang</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 2%"></div>
+                            </div>
+                            <span class="rating-percent">2%</span>
+                        </div>
+                        <div class="rating-bar-item">
+                            <span class="rating-label">1 Bintang</span>
+                            <div class="rating-bar">
+                                <div class="rating-fill" style="width: 1%"></div>
+                            </div>
+                            <span class="rating-percent">1%</span>
                         </div>
                     </div>
                 </div>
+                
+                <div class="review-list">
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="images/reviewer-1.jpg" alt="Budi Santoso" class="reviewer-avatar">
+                            <div>
+                                <h4>Budi Santoso</h4>
+                                <div class="review-date">15 Mei 2025</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="review-content">
+                            <p>Software ini benar-benar mengubah cara saya membuat konten! Sebelumnya saya butuh 3-4 jam untuk menulis satu artikel blog, sekarang hanya butuh 30 menit. Kualitas kontennya juga sangat baik dan tidak terdeteksi sebagai konten AI oleh Google. Sangat direkomendasikan untuk pemilik bisnis online yang ingin menghemat waktu.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="images/reviewer-2.jpg" alt="Siti Nurhaliza" class="reviewer-avatar">
+                            <div>
+                                <h4>Siti Nurhaliza</h4>
+                                <div class="review-date">10 Mei 2025</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="review-content">
+                            <p>Sebagai social media manager, AI Content Creator Pro sangat membantu saya membuat caption untuk berbagai platform. Fitur multi-bahasa juga sangat berguna karena klien saya memiliki audiens internasional. Support tim juga sangat responsif ketika saya mengalami kendala teknis. Worth every penny!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="images/reviewer-3.jpg" alt="Rudi Hartono" class="reviewer-avatar">
+                            <div>
+                                <h4>Rudi Hartono</h4>
+                                <div class="review-date">5 Mei 2025</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="review-content">
+                            <p>Software yang bagus dengan banyak fitur. Saya memberikan 4 bintang karena kadang-kadang output kontennya perlu diedit lagi untuk lebih personal. Tapi secara keseluruhan, ini adalah investasi yang bagus untuk bisnis saya. Fitur template email marketing sangat membantu kampanye saya.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="images/reviewer-4.jpg" alt="Dewi Lestari" class="reviewer-avatar">
+                            <div>
+                                <h4>Dewi Lestari</h4>
+                                <div class="review-date">1 Mei 2025</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                        </div>
+                        <div class="review-content">
+                            <p>Saya menjalankan toko online dengan ratusan produk dan software ini sangat membantu saya membuat deskripsi produk yang menarik. Bonus e-book dan video training juga sangat bermanfaat. Satu-satunya kekurangan adalah kadang server lambat saat jam sibuk, tapi secara keseluruhan sangat memuaskan.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#" class="next">Selanjutnya &raquo;</a>
+                </div>
             </div>
-
-            <div class="tab-content" id="alternatives">
-                <h2>Alternatif Produk</h2>
-                <div class="alternatives-list">
-                    <div class="alternative-item">
-                        <img src="assets/images/alternative1.jpg" alt="MailChimp" class="alternative-image">
-                        <div class="alternative-info">
-                            <h3>MailChimp</h3>
-                            <div class="alternative-rating">★★★★☆</div>
-                            <p>Platform email marketing populer dengan fitur lengkap dan paket gratis untuk pengguna pemula.</p>
-                            <a href="#" class="alternative-link">Bandingkan dengan UltraEmailPro</a>
+            
+            <div id="faq" class="tab-content">
+                <h2>Pertanyaan Umum</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Apakah saya perlu menginstal software ini di komputer saya?</div>
+                        <div class="accordion-content">
+                            <p>Tidak, AI Content Creator Pro adalah software berbasis web yang dapat diakses melalui browser. Anda tidak perlu menginstal apapun di komputer Anda. Cukup login ke akun Anda dan mulai gunakan dari perangkat apa pun dengan koneksi internet.</p>
                         </div>
                     </div>
-                    <div class="alternative-item">
-                        <img src="assets/images/alternative2.jpg" alt="ConvertKit" class="alternative-image">
-                        <div class="alternative-info">
-                            <h3>ConvertKit</h3>
-                            <div class="alternative-rating">★★★★☆</div>
-                            <p>Solusi email marketing yang dirancang khusus untuk kreator konten, blogger, dan penulis.</p>
-                            <a href="#" class="alternative-link">Bandingkan dengan UltraEmailPro</a>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Apakah ada biaya berlangganan bulanan?</div>
+                        <div class="accordion-content">
+                            <p>Tidak, AI Content Creator Pro menggunakan model pembayaran sekali bayar dengan akses seumur hidup. Anda hanya perlu membayar sekali dan mendapatkan akses penuh ke semua fitur dan update di masa depan tanpa biaya tambahan.</p>
                         </div>
                     </div>
-                    <div class="alternative-item">
-                        <img src="assets/images/alternative3.jpg" alt="ActiveCampaign" class="alternative-image">
-                        <div class="alternative-info">
-                            <h3>ActiveCampaign</h3>
-                            <div class="alternative-rating">★★★★★</div>
-                            <p>Platform otomatisasi pemasaran yang kuat dengan fitur CRM terintegrasi dan otomatisasi lanjutan.</p>
-                            <a href="#" class="alternative-link">Bandingkan dengan UltraEmailPro</a>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Apakah konten yang dihasilkan bebas dari plagiarisme?</div>
+                        <div class="accordion-content">
+                            <p>Ya, AI Content Creator Pro menghasilkan konten yang 100% unik dan bebas plagiarisme. Software ini menggunakan teknologi AI generatif terkini yang membuat konten dari awal, bukan menyalin dari sumber yang ada. Namun, kami tetap menyarankan untuk memeriksa konten dengan alat pendeteksi plagiarisme untuk memastikan keunikan konten.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Berapa banyak konten yang bisa saya hasilkan?</div>
+                        <div class="accordion-content">
+                            <p>Dengan AI Content Creator Pro, Anda dapat menghasilkan konten tanpa batas. Tidak ada batasan jumlah artikel, caption, atau email yang dapat Anda buat. Anda dapat menggunakan software ini sebanyak yang Anda butuhkan tanpa biaya tambahan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Apakah ada garansi uang kembali?</div>
+                        <div class="accordion-content">
+                            <p>Ya, kami menawarkan garansi uang kembali 30 hari. Jika Anda tidak puas dengan AI Content Creator Pro, Anda dapat meminta pengembalian dana penuh dalam 30 hari setelah pembelian tanpa pertanyaan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Bagaimana cara mendapatkan bantuan jika saya mengalami masalah?</div>
+                        <div class="accordion-content">
+                            <p>Kami menyediakan dukungan pelanggan premium melalui email dan live chat. Tim support kami tersedia 24/7 untuk membantu Anda dengan pertanyaan atau masalah teknis. Anda juga mendapatkan akses ke basis pengetahuan dan video tutorial yang komprehensif.</p>
                         </div>
                     </div>
                 </div>
@@ -329,24 +479,92 @@
     <section class="related-products">
         <div class="container">
             <h2>Produk Terkait</h2>
-            <div class="related-products-grid">
-                <div class="related-product-card">
-                    <img src="assets/images/funnel-builder.jpg" alt="FunnelMaster 3.0" class="related-product-image">
-                    <h3>FunnelMaster 3.0</h3>
-                    <p>Bangun funnel penjualan profesional tanpa perlu coding.</p>
-                    <a href="funnel-master.html" class="related-product-link">Lihat Detail</a>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product2.jpg" alt="Digital Marketing Mastery">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Kursus</div>
+                        <h3>Digital Marketing Mastery</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="rating-count">5.0 (87 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 2.750.000</span>
+                            <span class="old-price">Rp 3.500.000</span>
+                            <span class="discount">-21%</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/abc456/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="related-product-card">
-                    <img src="assets/images/webinar-platform.jpg" alt="WebinarPro" class="related-product-image">
-                    <h3>WebinarPro</h3>
-                    <p>Platform webinar dengan fitur interaksi real-time dan otomatisasi.</p>
-                    <a href="#" class="related-product-link">Lihat Detail</a>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product3.jpg" alt="Funnel Builder X">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Tools</div>
+                        <h3>Funnel Builder X</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <span class="rating-count">4.0 (156 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 997.000</span>
+                            <span class="old-price">Rp 1.997.000</span>
+                            <span class="discount">-50%</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/def789/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="related-product-card">
-                    <img src="assets/images/affiliate-software.jpg" alt="AffiliateHub" class="related-product-image">
-                    <h3>AffiliateHub</h3>
-                    <p>Software manajemen afiliasi untuk melacak dan mengelola program afiliasi.</p>
-                    <a href="#" class="related-product-link">Lihat Detail</a>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product6.jpg" alt="Social Media Automation">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Software</div>
+                        <h3>Social Media Automation</h3>
+                        <div class="product-rating">
+                            <span class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="rating-count">5.0 (63 ulasan)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">Rp 899.000</span>
+                            <span class="old-price">Rp 1.499.000</span>
+                            <span class="discount">-40%</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn-secondary">Lihat Detail</a>
+                            <a href="https://warriorplus.com/o2/a/mno303/0" class="btn-primary" target="_blank">Beli Sekarang</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -355,108 +573,71 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Siap Meningkatkan Strategi Email Marketing Anda?</h2>
-                <p>Dapatkan UltraEmailPro sekarang dan nikmati diskon 20% untuk 3 bulan pertama!</p>
-                <div class="cta-buttons">
-                    <a href="#" class="primary-button">Dapatkan Diskon Sekarang</a>
-                    <a href="#" class="secondary-button">Jadwalkan Demo</a>
+                <h2>Tingkatkan Produktivitas Konten Anda Sekarang!</h2>
+                <p>Dapatkan AI Content Creator Pro dengan diskon 50% dan bonus eksklusif senilai Rp 1.697.000. Penawaran terbatas!</p>
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">02</span>
+                        <span class="countdown-label">Hari</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">12</span>
+                        <span class="countdown-label">Jam</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">45</span>
+                        <span class="countdown-label">Menit</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">30</span>
+                        <span class="countdown-label">Detik</span>
+                    </div>
                 </div>
+                <a href="https://warriorplus.com/o2/a/xyz123/0" class="btn-cta" target="_blank">Beli Sekarang dengan Diskon 50%</a>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="index.html">AffiHub</a>
-                    <p>Ulasan produk digital terpercaya untuk keputusan pembelian yang lebih cerdas.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AutomarketHub</h3>
+                    <p>Platform affiliate marketing terpercaya yang menghubungkan produk berkualitas dengan pembeli potensial.</p>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h3>Navigasi</h3>
-                        <ul>
-                            <li><a href="index.html">Beranda</a></li>
-                            <li><a href="tentang.html">Tentang Kami</a></li>
-                            <li><a href="ulasan.html">Ulasan Produk</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="kontak.html">Kontak</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Kategori</h3>
-                        <ul>
-                            <li><a href="#">Email Marketing</a></li>
-                            <li><a href="#">Funnel Builder</a></li>
-                            <li><a href="#">Webinar</a></li>
-                            <li><a href="#">Affiliate Marketing</a></li>
-                            <li><a href="#">SEO Tools</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Legal</h3>
-                        <ul>
-                            <li><a href="#">Kebijakan Privasi</a></li>
-                            <li><a href="#">Syarat & Ketentuan</a></li>
-                            <li><a href="#">Disclaimer Afiliasi</a></li>
-                            <li><a href="#">Kebijakan Cookie</a></li>
-                        </ul>
-                    </div>
+                <div class="footer-col">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="reviews.html">Ulasan</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Kebijakan</h3>
+                    <ul>
+                        <li><a href="privacy.html">Kebijakan Privasi</a></li>
+                        <li><a href="terms.html">Syarat & Ketentuan</a></li>
+                        <li><a href="affiliate-policy.html">Kebijakan Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Dapatkan update terbaru tentang produk dan promo spesial.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Anda" required>
+                        <button type="submit">Langganan</button>
+                    </form>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 AffiHub. Powered by Vercel.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook">FB</a>
-                    <a href="#" aria-label="Twitter">TW</a>
-                    <a href="#" aria-label="Instagram">IG</a>
-                    <a href="#" aria-label="YouTube">YT</a>
-                </div>
+            <div class="copyright">
+                <p>&copy; 2025 AutomarketHub. Hak Cipta Dilindungi.</p>
             </div>
         </div>
     </footer>
-<section class="related-products">
-  <div class="container">
-    <h2>Produk Terkait</h2>
-    <div class="related-products-grid">
-      <div class="related-product-card">
-        <img src="assets/images/webinar-platform.jpg" alt="Webinar Platform" class="related-product-image">
-        <h3>WebinarPro</h3>
-        <p>Platform webinar untuk pemasaran digital dan edukasi online.</p>
-        <a href="#" class="related-product-link">Lihat Detail</a>
-      </div>
-      <div class="related-product-card">
-        <img src="assets/images/affiliate-software.jpg" alt="Affiliate Software" class="related-product-image">
-        <h3>AffiliateHub</h3>
-        <p>Software manajemen afiliasi untuk melacak dan mengelola program afiliasi.</p>
-        <a href="#" class="related-product-link">Lihat Detail</a>
-      </div>
-    </div>
-  </div>
-</section>
 
-    <script src="nav-script.js"></script>
-    <script>
-        // Tab functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-            
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons and contents
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    button.classList.add('active');
-                    
-                    // Show corresponding content
-                    const tabId = button.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
-                });
-            });
-        });
-    </script>
+    <script src="product-detail-script.js"></script>
 </body>
 </html>
