@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - AutomarketHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AutomarketHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="products.html">Produk</a></li>
+                    <li><a href="reviews.html">Ulasan</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <p>Punya pertanyaan atau ingin berkolaborasi? Kami siap membantu Anda!</p>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@automarkethub.my.id</p>
+                    <p>support@automarkethub.my.id</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Telepon</h3>
+                    <p>+62 812 3456 7890</p>
+                    <p>Senin - Jumat: 09.00 - 17.00 WIB</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Lokasi</h3>
+                    <p>Jakarta, Indonesia</p>
+                    <p>Kode Pos: 12345</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <div class="container">
+            <h2>Kirim Pesan</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Nomor Telepon (Opsional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subjek</label>
+                    <select id="subject" name="subject">
+                        <option value="general">Pertanyaan Umum</option>
+                        <option value="support">Dukungan Teknis</option>
+                        <option value="partnership">Kerjasama</option>
+                        <option value="feedback">Umpan Balik</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Berlangganan newsletter untuk mendapatkan update terbaru</label>
+                </div>
+                <button type="submit" class="btn-primary">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Pertanyaan Umum</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">Bagaimana cara mendaftar di AutomarketHub?</div>
+                    <div class="accordion-content">
+                        <p>Untuk mendaftar di AutomarketHub, klik tombol "Daftar" di pojok kanan atas halaman beranda. Isi formulir pendaftaran dengan informasi yang diperlukan, dan Anda akan menerima email konfirmasi setelah pendaftaran berhasil.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Berapa lama waktu respon untuk pertanyaan yang dikirim melalui formulir kontak?</div>
+                    <div class="accordion-content">
+                        <p>Kami berusaha merespon semua pertanyaan dalam waktu 24-48 jam kerja. Untuk pertanyaan yang lebih mendesak, silakan hubungi kami melalui nomor telepon yang tercantum.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Bagaimana cara menjadi affiliate di AutomarketHub?</div>
+                    <div class="accordion-content">
+                        <p>Untuk menjadi affiliate, Anda perlu mendaftar akun terlebih dahulu, kemudian klik menu "Program Affiliate" di dashboard akun Anda. Isi formulir aplikasi affiliate dan tunggu persetujuan dari tim kami.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-connect">
+        <div class="container">
+            <h2>Terhubung dengan Kami</h2>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AutomarketHub</h3>
+                    <p>Platform affiliate marketing terpercaya yang menghubungkan produk berkualitas dengan pembeli potensial.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="reviews.html">Ulasan</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Kebijakan</h3>
+                    <ul>
+                        <li><a href="privacy.html">Kebijakan Privasi</a></li>
+                        <li><a href="terms.html">Syarat & Ketentuan</a></li>
+                        <li><a href="affiliate-policy.html">Kebijakan Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Dapatkan update terbaru tentang produk dan promo spesial.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Anda" required>
+                        <button type="submit">Langganan</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 AutomarketHub. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
