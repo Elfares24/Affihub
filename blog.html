@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - AutomarketHub</title>
+    <link rel="stylesheet" href="blog-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Blog AutomarketHub - Temukan tips, review, dan panduan terbaik tentang tools dan software AI untuk bisnis online Anda">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">AutomarketHub</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="products.html">Produk</a></li>
+                    <li><a href="ulasan.html">Ulasan</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Blog AutomarketHub</h1>
+            <p>Temukan tips, review, dan panduan terbaik tentang tools dan software AI untuk bisnis online Anda</p>
+            <div class="search-container">
+                <input type="text" placeholder="Cari artikel...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-tab active" onclick="filterCategory('all')">Semua</button>
+                <button class="category-tab" onclick="filterCategory('ai-tools')">AI Tools</button>
+                <button class="category-tab" onclick="filterCategory('marketing')">Marketing</button>
+                <button class="category-tab" onclick="filterCategory('tutorial')">Tutorial</button>
+                <button class="category-tab" onclick="filterCategory('review')">Review</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-post">
+        <div class="container">
+            <div class="featured-post-card">
+                <div class="featured-post-image">
+                    <img src="images/blog/superai-featured.jpg" alt="Super AI - Aplikasi AI All-in-One">
+                    <span class="featured-badge">Featured</span>
+                </div>
+                <div class="featured-post-content">
+                    <div class="post-meta">
+                        <span class="post-category">Review</span>
+                        <span class="post-date">21 Mei 2025</span>
+                    </div>
+                    <h2>Review Super AI: Aplikasi AI All-in-One yang Menggantikan 230+ Tools dengan Sekali Klik</h2>
+                    <p>Temukan bagaimana Super AI dapat menghemat biaya langganan bulanan Anda hingga Rp 7 juta per tahun dengan menggantikan puluhan tools AI terpisah dalam satu dashboard sederhana.</p>
+                    <a href="blog-post-superai.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="posts-grid">
+                <!-- Post 1 -->
+                <div class="post-card" data-category="review ai-tools">
+                    <div class="post-image">
+                        <img src="images/blog/superai-dashboard.jpg" alt="Dashboard Super AI">
+                        <span class="post-category-badge">Review</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">21 Mei 2025</span>
+                            <span class="post-read-time">8 menit</span>
+                        </div>
+                        <h3>Super AI: Solusi Lengkap untuk Content Creator dan Pemilik Bisnis Online</h3>
+                        <p>Mengapa membayar puluhan langganan bulanan jika Anda bisa mendapatkan semua fitur dalam satu aplikasi? Super AI menawarkan solusi revolusioner...</p>
+                        <a href="blog-post-superai-solution.html" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="post-card" data-category="tutorial ai-tools">
+                    <div class="post-image">
+                        <img src="images/blog/superai-tutorial.jpg" alt="Tutorial Super AI">
+                        <span class="post-category-badge">Tutorial</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">20 Mei 2025</span>
+                            <span class="post-read-time">10 menit</span>
+                        </div>
+                        <h3>Cara Menggunakan Super AI untuk Membuat Konten Viral dalam 3 Langkah Sederhana</h3>
+                        <p>Panduan langkah demi langkah untuk memanfaatkan kekuatan Super AI dalam membuat konten yang menarik perhatian dan meningkatkan engagement...</p>
+                        <a href="blog-post-superai-tutorial.html" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="post-card" data-category="marketing">
+                    <div class="post-image">
+                        <img src="images/blog/ai-marketing.jpg" alt="AI Marketing">
+                        <span class="post-category-badge">Marketing</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">18 Mei 2025</span>
+                            <span class="post-read-time">6 menit</span>
+                        </div>
+                        <h3>5 Cara AI Dapat Meningkatkan Strategi Marketing Bisnis Online Anda</h3>
+                        <p>Pelajari bagaimana teknologi AI seperti Super AI dapat membantu Anda mengotomatisasi dan meningkatkan efektivitas kampanye marketing...</p>
+                        <a href="blog-post-ai-marketing.html" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="post-card" data-category="review">
+                    <div class="post-image">
+                        <img src="images/blog/ai-tools-comparison.jpg" alt="Perbandingan AI Tools">
+                        <span class="post-category-badge">Review</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">15 Mei 2025</span>
+                            <span class="post-read-time">12 menit</span>
+                        </div>
+                        <h3>Perbandingan: Super AI vs 10 Tools AI Teratas di 2025</h3>
+                        <p>Analisis mendalam tentang bagaimana Super AI dibandingkan dengan tools AI populer lainnya seperti Jasper, MidJourney, dan ElevenLabs...</p>
+                        <a href="blog-post-ai-comparison.html" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="post-card" data-category="tutorial">
+                    <div class="post-image">
+                        <img src="images/blog/affiliate-marketing.jpg" alt="Affiliate Marketing">
+                        <span class="post-category-badge">Tutorial</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">12 Mei 2025</span>
+                            <span class="post-read-time">9 menit</span>
+                        </div>
+                        <h3>Panduan Lengkap Memulai Bisnis Affiliate Marketing dengan Bantuan AI</h3>
+                        <p>Temukan cara membangun bisnis affiliate marketing yang menguntungkan dengan memanfaatkan kekuatan AI untuk konten, otomatisasi, dan analitik...</p>
+                        <a href="blog-post-affiliate-guide.html" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="post-card" data-category="ai-tools">
+                    <div class="post-image">
+                        <img src="images/blog/superai-features.jpg" alt="Fitur Super AI">
+                        <span class="post-category-badge">AI Tools</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date">10 Mei 2025</span>
+                            <span class="post-read-time">7 menit</span>
+                        </div>
+                        <h3>10 Fitur Tersembunyi Super AI yang Jarang Diketahui</h3>
+                        <p>Temukan fitur-fitur tersembunyi dan trik Super AI yang dapat meningkatkan produktivitas dan kreativitas Anda secara dramatis...</p>
+                        <a href="blog-post-superai-features.html" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="next">Selanjutnya <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Dapatkan Update Terbaru</h2>
+                <p>Berlangganan newsletter kami untuk mendapatkan artikel terbaru, tips, dan penawaran spesial langsung ke inbox Anda.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Alamat Email Anda" required>
+                    <button type="submit">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AutomarketHub</h3>
+                    <p>Platform affiliate marketing terpercaya yang menghubungkan produk berkualitas dengan pembeli potensial.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="ulasan.html">Ulasan</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Kategori</h3>
+                    <ul>
+                        <li><a href="products.html?category=software">Software</a></li>
+                        <li><a href="products.html?category=kursus">Kursus</a></li>
+                        <li><a href="products.html?category=tools">Tools</a></li>
+                        <li><a href="products.html?category=marketing">Marketing</a></li>
+                        <li><a href="products.html?category=ai-tools">AI Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Kebijakan</h3>
+                    <ul>
+                        <li><a href="privacy.html">Kebijakan Privasi</a></li>
+                        <li><a href="terms.html">Syarat & Ketentuan</a></li>
+                        <li><a href="affiliate-policy.html">Kebijakan Affiliate</a></li>
+                        <li><a href="refund.html">Kebijakan Refund</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 AutomarketHub. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="blog-script.js"></script>
+</body>
+</html>
