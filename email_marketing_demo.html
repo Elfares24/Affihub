@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Marketing Demo - AutomarketHub</title>
+    <style>
+        /* Reset dan Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #4a6cf7;
+        }
+        
+        /* Main Content Styles */
+        .main-content {
+            padding: 60px 0;
+        }
+        
+        .demo-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .demo-section {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: #4a6cf7;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Form Styles */
+        .form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        
+        .form-container h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #4a6cf7;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e1e5ee;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #4a6cf7;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
+        }
+        
+        .form-group.checkbox {
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-group.checkbox input {
+            width: auto;
+            margin-right: 10px;
+        }
+        
+        .form-group.checkbox label {
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background-color: #4a6cf7;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .btn-primary:hover {
+            background-color: #6c5ce7;
+            transform: translateY(-2px);
+        }
+        
+        /* Email Preview Styles */
+        .email-preview {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .email-header {
+            background-color: #4a6cf7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .email-header h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .email-header p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .email-body {
+            padding: 30px;
+        }
+        
+        .email-body h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #4a6cf7;
+        }
+        
+        .email-body p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .email-body .highlight {
+            background-color: #f8f9fa;
+            border-left: 3px solid #4a6cf7;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .email-body .cta-button {
+            display: inline-block;
+            background-color: #4a6cf7;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+        
+        .email-footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #e1e5ee;
+        }
+        
+        /* Popup Styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .popup-content {
+            background-color: #fff;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            padding: 40px;
+            position: relative;
+            transform: translateY(-20px);
+            transition: all 0.3s ease;
+        }
+        
+        .popup-overlay.active .popup-content {
+            transform: translateY(0);
+        }
+        
+        .close-popup {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background-color: rgba(46, 204, 113, 0.1);
+            border-left: 4px solid #2ecc71;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        
+        .success-message.active {
+            display: block;
+        }
+        
+        /* Additional Sections */
+        .features-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(74, 108, 247, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+            color: #4a6cf7;
+        }
+        
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .feature-card p {
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2d3748;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-logo p {
+            color: #cbd5e0;
+            max-width: 300px;
+        }
+        
+        .footer-links h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #4a6cf7;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+            list-style: none;
+        }
+        
+        .footer-links ul li a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">AutomarketHub</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Email Marketing System Demo</h2>
+                <p>Lihat bagaimana sistem email marketing dapat membantu Anda mengumpulkan lead dan nurturing prospek untuk meningkatkan konversi affiliate marketing.</p>
+            </div>
+
+            <div class="demo-section">
+                <div class="form-container">
+                    <h3>Form Signup Newsletter</h3>
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Alamat Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest">Minat Utama</label>
+                            <select id="interest" name="interest">
+                                <option value="">Pilih Minat Anda</option>
+                                <option value="affiliate-pemula">Affiliate Marketing Pemula</option>
+                                <option value="affiliate-lanjutan">Affiliate Marketing Lanjutan</option>
+                                <option value="produk-digital">Produk Digital</option>
+                                <option value="seo-traffic">SEO & Traffic</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">Saya setuju menerima email berisi tips dan promosi dari AutomarketHub</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Berlangganan Newsletter</button>
+                    </form>
+                    
+                    <div class="success-message" id="successMessage">
+                        <p>Terima kasih telah berlangganan newsletter AutomarketHub! Silakan periksa email Anda untuk konfirmasi.</p>
+                    </div>
+                </div>
+                
+                <div class="email-preview">
+                    <div class="email-header">
+                        <h3>AutomarketHub Newsletter</h3>
+                        <p>Affiliate Marketing Tips & Updates</p>
+                    </div>
+                    
+                    <div class="email-body">
+                        <h4>Selamat Datang di Komunitas AutomarketHub!</h4>
+                        
+                        <p>Halo <span id="previewName">Nama</span>,</p>
+                        
+                        <p>Terima kasih telah bergabung dengan newsletter AutomarketHub! Sebagai affiliate marketer, Anda telah mengambil langkah penting untuk membangun "One-Person Empire" Anda.</p>
+                        
+                        <p>Kami akan membantu Anda dengan:</p>
+                        <ul>
+                            <li>Tips dan strategi affiliate marketing terbaru</li>
+                            <li>Review produk terbaik untuk dipromosikan</li>
+                            <li>Panduan langkah demi langkah untuk meningkatkan konversi</li>
+                            <li>Penawaran eksklusif dari partner kami</li>
+                        </ul>
+                        
+                        <div class="highlight">
+                            <p><strong>Sebagai hadiah selamat datang</strong>, silakan unduh e-book GRATIS kami: "Panduan Lengkap Memulai Affiliate Marketing"</p>
+                        </div>
+                        
+                        <a href="#" class="cta-button">Download E-book Gratis</a>
+                        
+                        <p>Jangan ragu untuk membalas email ini jika Anda memiliki pertanyaan!</p>
+                        
+                        <p>Salam sukses,<br>Tim AutomarketHub</p>
+                    </div>
+                    
+                    <div class="email-footer">
+                        <p>© 2025 AutomarketHub. Semua Hak Dilindungi.</p>
+                        <p>Jl. Affiliate No. 123, Jakarta, Indonesia</p>
+                        <p><a href="#">Berhenti berlangganan</a> | <a href="#">Kebijakan Privasi</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Fitur Email Marketing System</h2>
+                    <p>Tingkatkan strategi affiliate marketing Anda dengan sistem email marketing yang powerful</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Segmentasi Subscriber</h3>
+                        <p>Kelompokkan subscriber berdasarkan minat dan perilaku untuk pengiriman konten yang relevan</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Otomatisasi Email</h3>
+                        <p>Kirim email secara otomatis berdasarkan trigger dan jadwal yang telah ditentukan</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>Template Profesional</h3>
+                        <p>Gunakan template email yang menarik dan responsif untuk meningkatkan engagement</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h3>Analitik Detail</h3>
+                        <p>Pantau performa kampanye email dengan metrik open rate, click rate, dan konversi</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>A/B Testing</h3>
+                        <p>Uji berbagai elemen email untuk menemukan kombinasi dengan performa terbaik</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔔</div>
+                        <h3>Form Popup</h3>
+                        <p>Tingkatkan signup rate dengan form popup yang muncul di waktu yang tepat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <span class="close-popup" id="closePopup">&times;</span>
+            <h3>Dapatkan E-book Gratis!</h3>
+            <p>Berlangganan newsletter kami dan dapatkan e-book "Panduan Lengkap Memulai Affiliate Marketing" secara GRATIS!</p>
+            
+            <form id="popupForm">
+                <div class="form-group">
+                    <label for="popupEmail">Alamat Email</label>
+                    <input type="email" id="popupEmail" name="popupEmail" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Dapatkan E-book Gratis</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>AutomarketHub</h2>
+                    <p>Platform affiliate marketing terpercaya untuk membangun "One-Person Empire" Anda.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Produk</a></li>
+                        <li><a href="#">Ulasan</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Panduan Affiliate</a></li>
+                        <li><a href="#">Tools Rekomendasi</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutomarketHub. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form Submission
+            const signupForm = document.getElementById('signupForm');
+            const successMessage = document.getElementById('successMessage');
+            const previewName = document.getElementById('previewName');
+            const nameInput = document.getElementById('name');
+            
+            // Update preview name as user types
+            nameInput.addEventListener('input', function() {
+                previewName.textContent = this.value || 'Nama';
+            });
+            
+            // Form submission
+            signupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission
+                setTimeout(function() {
+                    successMessage.classList.add('active');
+                    signupForm.reset();
+                    previewName.textContent = 'Nama';
+                }, 1000);
+            });
+            
+            // Popup functionality
+            const popupOverlay = document.getElementById('popupOverlay');
+            const closePopup = document.getElementById('closePopup');
+            const popupForm = document.getElementById('popupForm');
+            
+            // Show popup after 5 seconds
+            setTimeout(function() {
+                popupOverlay.classList.add('active');
+            }, 5000);
+            
+            // Close popup
+            closePopup.addEventListener('click', function() {
+                popupOverlay.classList.remove('active');
+            });
+            
+            // Close popup when clicking outside
+            popupOverlay.addEventListener('click', function(e) {
+                if (e.target === popupOverlay) {
+                    popupOverlay.classList.remove('active');
+                }
+            });
+            
+            // Popup form submission
+            popupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission
+                setTimeout(function() {
+                    popupOverlay.classList.remove('active');
+                    successMessage.classList.add('active');
+                    popupForm.reset();
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
