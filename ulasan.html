@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulasan Produk Digital - AutomarketHub</title>
+    <link rel="stylesheet" href="review-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="AutomarketHub Logo">
+                    <span>AutomarketHub</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="products.html">Produk</a></li>
+                    <li class="active"><a href="ulasan.html">Ulasan</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Ulasan Produk Digital Terbaik</h1>
+                <p>Temukan software, tools & platform digital terbaik untuk kebutuhan Anda.</p>
+                <div class="search-box">
+                    <input type="text" placeholder="Cari produk...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Review -->
+    <section class="featured-review">
+        <div class="container">
+            <div class="featured-review-content">
+                <div class="featured-review-image">
+                    <img src="images/product-detail/product1-main.jpg" alt="Super AI">
+                    <div class="featured-badge">Terlaris</div>
+                </div>
+                <div class="featured-review-info">
+                    <div class="category">SOFTWARE AI</div>
+                    <h2>Super AI: Aplikasi AI All-in-One yang Menggantikan 230+ Tools</h2>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5/5</span>
+                        </div>
+                        <div class="reviews-count">(128 ulasan)</div>
+                    </div>
+                    <div class="price">
+                        <span class="current-price">Rp 1.499.000</span>
+                        <span class="old-price">Rp 2.999.000</span>
+                        <span class="discount">50%</span>
+                    </div>
+                    <div class="highlight">
+                        <p>World's First SuperModel™ That Fuses Every Single AI Model Ever Created Into One Brain-Dead-Simple Dashboard & Automates Your Entire Business In Minutes...</p>
+                        <p>(One Supermodel. Infinite Power. Zero Subscriptions.)</p>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="product-detail.html" class="btn btn-primary">Lihat Detail</a>
+                        <a href="https://warriorplus.com/o2/a/wjh7t5s/0" class="btn btn-cta">Beli Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Categories -->
+    <section class="review-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kategori Ulasan</h2>
+                <p>Pilih kategori untuk menemukan ulasan yang Anda butuhkan</p>
+            </div>
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">Semua</button>
+                <button class="category-tab" data-category="software">Software AI</button>
+                <button class="category-tab" data-category="marketing">Marketing Tools</button>
+                <button class="category-tab" data-category="productivity">Productivity Tools</button>
+                <button class="category-tab" data-category="courses">Kursus Online</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review List -->
+    <section class="review-list">
+        <div class="container">
+            <div class="review-grid">
+                <!-- Review Item 1 -->
+                <div class="review-card" data-category="software">
+                    <div class="review-image">
+                        <img src="images/product-detail/product1-main.jpg" alt="Super AI">
+                        <div class="review-badge">Terlaris</div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-category">SOFTWARE AI</div>
+                        <h3>Super AI: Aplikasi AI All-in-One</h3>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.5/5</span>
+                        </div>
+                        <div class="review-price">
+                            <span class="current">Rp 1.499.000</span>
+                            <span class="old">Rp 2.999.000</span>
+                            <span class="discount">50%</span>
+                        </div>
+                        <p class="review-excerpt">
+                            Software AI untuk membuat konten blog, sosial media, dan email marketing secara otomatis dengan kualitas tinggi.
+                        </p>
+                        <div class="review-meta">
+                            <span class="review-date">Update: 21 Mei 2025</span>
+                            <a href="review-detail-superai.html" class="review-read-more">Baca Ulasan <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Item 2 -->
+                <div class="review-card" data-category="marketing">
+                    <div class="review-image">
+                        <img src="images/product-detail/product2-main.jpg" alt="UltraEmailPro">
+                        <div class="review-badge">Baru</div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-category">MARKETING</div>
+                        <h3>UltraEmailPro - Solusi Email Marketing</h3>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span>4.0/5</span>
+                        </div>
+                        <div class="review-price">
+                            <span class="current">Rp 899.000</span>
+                            <span class="old">Rp 1.499.000</span>
+                            <span class="discount">40%</span>
+                        </div>
+                        <p class="review-excerpt">
+                            Platform email marketing dengan fitur lengkap untuk automasi email, segmentasi, dan pelaporan yang powerful.
+                        </p>
+                        <div class="review-meta">
+                            <span class="review-date">Update: 18 Mei 2025</span>
+                            <a href="review-detail-ultraemailpro.html" class="review-read-more">Baca Ulasan <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Item 3 -->
+                <div class="review-card" data-category="productivity">
+                    <div class="review-image">
+                        <img src="images/product-detail/product3-main.jpg" alt="FunnelMaster">
+                        <div class="review-badge">Hot</div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-category">TOOLS</div>
+                        <h3>FunnelMaster 3.0 - Bangun Funnel Sekelas Pro</h3>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>5.0/5</span>
+                        </div>
+                        <div class="review-price">
+                            <span class="current">Rp 1.299.000</span>
+                            <span class="old">Rp 2.499.000</span>
+                            <span class="discount">48%</span>
+                        </div>
+                        <p class="review-excerpt">
+                            Tool funnel builder yang membantu Anda membuat sales funnel dengan mudah tanpa coding.
+                        </p>
+                        <div class="review-meta">
+                            <span class="review-date">Update: 15 Mei 2025</span>
+                            <a href="review-detail-funnelmaster.html" class="review-read-more">Baca Ulasan <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Item 4 -->
+                <div class="review-card" data-category="courses">
+                    <div class="review-image">
+                        <img src="images/product-detail/product4-main.jpg" alt="AI Mastery Course">
+                        <div class="review-badge">Populer</div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-category">KURSUS</div>
+                        <h3>AI Mastery Course - Kuasai AI dalam 30 Hari</h3>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.5/5</span>
+                        </div>
+                        <div class="review-price">
+                            <span class="current">Rp 799.000</span>
+                            <span class="old">Rp 1.299.000</span>
+                            <span class="discount">38%</span>
+                        </div>
+                        <p class="review-excerpt">
+                            Kursus komprehensif untuk menguasai teknologi AI dan mengaplikasikannya dalam bisnis Anda.
+                        </p>
+                        <div class="review-meta">
+                            <span class="review-date">Update: 10 Mei 2025</span>
+                            <a href="review-detail-aimastery.html" class="review-read-more">Baca Ulasan <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Item 5 -->
+                <div class="review-card" data-category="marketing">
+                    <div class="review-image">
+                        <img src="images/product-detail/product5-main.jpg" alt="SocialAI Pro">
+                        <div class="review-badge">Terbaik</div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-category">MARKETING</div>
+                        <h3>SocialAI Pro - Otomatisasi Media Sosial</h3>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span>4.0/5</span>
+                        </div>
+                        <div class="review-price">
+                            <span class="current">Rp 999.000</span>
+                            <span class="old">Rp 1.799.000</span>
+                            <span class="discount">44%</span>
+                        </div>
+                        <p class="review-excerpt">
+                            Tool AI untuk membuat, menjadwalkan, dan menganalisis konten media sosial secara otomatis.
+                        </p>
+                        <div class="review-meta">
+                            <span class="review-date">Update: 8 Mei 2025</span>
+                            <a href="review-detail-socialaipro.html" class="review-read-more">Baca Ulasan <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Item 6 -->
+                <div class="review-card" data-category="software">
+                    <div class="review-image">
+                        <img src="images/product-detail/product6-main.jpg" alt="AI Writer Pro">
+                        <div class="review-badge">Hemat</div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-category">SOFTWARE AI</div>
+                        <h3>AI Writer Pro - Asisten Penulisan Konten</h3>
+                        <div class="review-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span>4.0/5</span>
+                        </div>
+                        <div class="review-price">
+                            <span class="current">Rp 599.000</span>
+                            <span class="old">Rp 999.000</span>
+                            <span class="discount">40%</span>
+                        </div>
+                        <p class="review-excerpt">
+                            Software AI khusus untuk menulis artikel, copy, dan konten marketing dengan kualitas tinggi.
+                        </p>
+                        <div class="review-meta">
+                            <span class="review-date">Update: 5 Mei 2025</span>
+                            <a href="review-detail-aiwriter.html" class="review-read-more">Baca Ulasan <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="next">Selanjutnya <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Apa Kata Mereka</h2>
+                <p>Testimoni dari pengguna produk yang kami rekomendasikan</p>
+            </div>
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Super AI benar-benar mengubah cara saya bekerja. Sekarang saya bisa membuat konten berkualitas tinggi dalam waktu singkat dan menghemat biaya langganan bulanan untuk berbagai tools."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/user1.jpg" alt="Budi Santoso">
+                        <div class="author-info">
+                            <h4>Budi Santoso</h4>
+                            <p>Content Creator</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "UltraEmailPro membantu saya meningkatkan open rate email hingga 35% dan conversion rate naik 2x lipat. Fitur segmentasi dan automasi-nya sangat powerful!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/user2.jpg" alt="Siti Rahma">
+                        <div class="author-info">
+                            <h4>Siti Rahma</h4>
+                            <p>Digital Marketer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "FunnelMaster 3.0 adalah game changer! Saya bisa membuat sales funnel profesional tanpa bantuan developer dan hasilnya luar biasa. ROI naik hingga 300%!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/testimonials/user3.jpg" alt="Andi Wijaya">
+                        <div class="author-info">
+                            <h4>Andi Wijaya</h4>
+                            <p>Online Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Trust Us -->
+    <section class="why-trust-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mengapa Mempercayai Ulasan Kami</h2>
+                <p>Kami menguji setiap produk secara mendalam sebelum merekomendasikannya kepada Anda</p>
+            </div>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Pengujian Mendalam</h3>
+                    <p>Setiap produk diuji secara menyeluruh oleh tim ahli kami selama minimal 2 minggu</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Ulasan Jujur</h3>
+                    <p>Kami menyajikan kelebihan dan kekurangan setiap produk secara transparan</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Update Berkala</h3>
+                    <p>Ulasan kami diperbarui secara berkala untuk mencerminkan perubahan dan fitur terbaru</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Garansi Kepuasan</h3>
+                    <p>Semua produk yang kami rekomendasikan memiliki garansi uang kembali minimal 30 hari</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Mulai Tingkatkan Bisnis Online Anda Hari Ini</h2>
+                <p>Dapatkan akses ke produk digital terbaik dengan diskon eksklusif dan bonus spesial</p>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span id="countdown-hours">23</span>
+                        <span>Jam</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="countdown-minutes">59</span>
+                        <span>Menit</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="countdown-seconds">24</span>
+                        <span>Detik</span>
+                    </div>
+                </div>
+                <a href="products.html" class="btn btn-cta">Lihat Semua Produk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Dapatkan Update Terbaru</h2>
+                <p>Berlangganan newsletter kami untuk mendapatkan ulasan terbaru, tips, dan penawaran spesial langsung ke inbox Anda.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Alamat Email Anda" required>
+                    <button type="submit" class="btn btn-primary">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>AutomarketHub</h3>
+                    <p>Platform affiliate marketing terpercaya yang menghubungkan produk berkualitas dengan pembeli potensial.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="ulasan.html">Ulasan</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Kategori</h3>
+                    <ul>
+                        <li><a href="products.html?category=software">Software</a></li>
+                        <li><a href="products.html?category=kursus">Kursus</a></li>
+                        <li><a href="products.html?category=tools">Tools</a></li>
+                        <li><a href="products.html?category=marketing">Marketing</a></li>
+                        <li><a href="products.html?category=ai-tools">AI Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Kebijakan</h3>
+                    <ul>
+                        <li><a href="privacy.html">Kebijakan Privasi</a></li>
+                        <li><a href="terms.html">Syarat & Ketentuan</a></li>
+                        <li><a href="refund.html">Kebijakan Refund</a></li>
+                        <li><a href="affiliate.html">Program Affiliate</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutomarketHub. Powered by Vercel.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="review-script.js"></script>
+</body>
+</html>
