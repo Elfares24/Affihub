@@ -455,51 +455,8 @@
     color: #666;
   }
 </style>
-// Fungsi untuk menampilkan popup
-  function showNewsletterPopup() {
-    // Cek apakah user sudah memilih untuk tidak menampilkan popup lagi
-    if (localStorage.getItem('dontShowNewsletterPopup') !== 'true') {
-      document.getElementById("newsletter-popup").style.display = "block";
-    }
-  }
-  
-  // Fungsi untuk menutup popup
-  function closeNewsletterPopup() {
-    document.getElementById("newsletter-popup").style.display = "none";
-  }
-  
-  // Fungsi untuk menyimpan preferensi "jangan tampilkan lagi"
-  function dontShowAgain() {
-    if (document.getElementById("dont-show-popup").checked) {
-      localStorage.setItem('dontShowNewsletterPopup', 'true');
-    } else {
-      localStorage.removeItem('dontShowNewsletterPopup');
-    }
-  }
-  
-  // Tampilkan popup setelah 3 detik halaman dimuat
-  document.addEventListener("DOMContentLoaded", function() {
-    // Cek apakah ini adalah kunjungan pertama user
-    if (!localStorage.getItem('popupShown')) {
-      // Tampilkan popup setelah 3 detik
-      setTimeout(function() {
-        showNewsletterPopup();
-        // Tandai bahwa popup sudah ditampilkan
-        localStorage.setItem('popupShown', 'true');
-      }, 3000); // 3000 ms = 3 detik
-    }
-    
-    // Tutup popup jika user mengklik di luar popup
-    window.onclick = function(event) {
-      var popup = document.getElementById("newsletter-popup");
-      if (event.target == popup) {
-        popup.style.display = "none";
-      }
-    }
-  });
-</script>
 
-    <!-- Scripts -->
+  <!-- Scripts -->
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script type="text/javascript">
         (function($) {
@@ -535,5 +492,49 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script>
+  // Fungsi untuk menampilkan popup
+  function showNewsletterPopup() {
+    // Cek apakah user sudah memilih untuk tidak menampilkan popup lagi
+    if (localStorage.getItem('dontShowNewsletterPopup') !== 'true') {
+      document.getElementById("newsletter-popup").style.display = "block";
+    }
+  }
+  
+  // Fungsi untuk menutup popup
+  function closeNewsletterPopup() {
+    document.getElementById("newsletter-popup").style.display = "none";
+  }
+  
+  // Fungsi untuk menyimpan preferensi "jangan tampilkan lagi"
+  function dontShowAgain() {
+    if (document.getElementById("dont-show-popup").checked) {
+      localStorage.setItem('dontShowNewsletterPopup', 'true');
+    } else {
+      localStorage.removeItem('dontShowNewsletterPopup');
+    }
+  }
+  
+  // Tampilkan popup setelah 5 detik halaman dimuat
+  document.addEventListener("DOMContentLoaded", function() {
+    // Cek apakah ini adalah kunjungan pertama user
+    if (!localStorage.getItem('popupShown')) {
+      // Tampilkan popup setelah 5 detik
+      setTimeout(function() {
+        showNewsletterPopup();
+        // Tandai bahwa popup sudah ditampilkan
+        localStorage.setItem('popupShown', 'true');
+      }, 5000); // 5000 ms = 5 detik
+    }
+    
+    // Tutup popup jika user mengklik di luar popup
+    window.onclick = function(event) {
+      var popup = document.getElementById("newsletter-popup");
+      if (event.target == popup) {
+        popup.style.display = "none";
+      }
+    }
+  });
+</script>
 </body>
 </html>
