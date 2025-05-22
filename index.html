@@ -507,7 +507,20 @@
       }
     }
   });
-</script>
+// Tampilkan popup secara otomatis setelah beberapa detik
+document.addEventListener("DOMContentLoaded", function() {
+  // Cek apakah ini adalah kunjungan pertama user
+  if (!localStorage.getItem('popupShown')) {
+    // Tampilkan popup setelah 5 detik
+    setTimeout(function() {
+      showNewsletterPopup();
+      // Tandai bahwa popup sudah ditampilkan
+      localStorage.setItem('popupShown', 'true');
+    }, 3000); // 3000 ms = 3 detik
+  }
+});
+
+    </script>
     <!-- Newsletter -->
     <section class="newsletter">
         <div class="container">
