@@ -515,16 +515,16 @@
     }
   }
   
-  // Tampilkan popup setelah 5 detik halaman dimuat
+  // Tampilkan popup setelah 3 detik halaman dimuat
   document.addEventListener("DOMContentLoaded", function() {
     // Cek apakah ini adalah kunjungan pertama user
     if (!localStorage.getItem('popupShown')) {
-      // Tampilkan popup setelah 5 detik
+      // Tampilkan popup setelah 3 detik
       setTimeout(function() {
         showNewsletterPopup();
         // Tandai bahwa popup sudah ditampilkan
         localStorage.setItem('popupShown', 'true');
-      }, 5000); // 5000 ms = 5 detik
+      }, 3000); // 3000 ms = 3 detik
     }
     
     // Tutup popup jika user mengklik di luar popup
