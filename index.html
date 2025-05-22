@@ -585,7 +585,75 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
         </div>
     </footer>
+<script src="homepage-script.js"></script>
 
-    <script src="homepage-script.js"></script>
+<!-- Popup Newsletter -->
+<div id="simple-newsletter-popup" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); overflow: auto;">
+  <div style="background-color: #fff; margin: 15% auto; padding: 30px; border-radius: 8px; width: 90%; max-width: 500px; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <span id="close-popup" style="position: absolute; top: 10px; right: 15px; color: #aaa; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <h3 style="margin-top: 0; color: #333; font-size: 22px;">Berlangganan Newsletter</h3>
+    <p style="color: #666; margin-bottom: 20px;">Dapatkan update terbaru dan penawaran spesial langsung ke inbox Anda.</p>
+    
+    <!-- Begin Mailchimp Signup Form -->
+    <form action="https://weebly.us16.list-manage.com/subscribe/post?u=2139e4a12712da120e0d9646&amp;id=d871d7d145&amp;f_id=00cfc2e1f0" method="post" target="_blank">
+      <div>
+        <input type="email" name="EMAIL" placeholder="Alamat Email Anda" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_2139e4a12712da120e0d9646_d871d7d145" tabindex="-1" value="">
+        </div>
+        <input type="submit" value="Berlangganan" name="subscribe" style="background-color: #ff6600; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-weight: bold;">
+      </div>
+    </form>
+    <!-- End Mailchimp Signup Form -->
+    
+    <div style="margin-top: 15px; text-align: center; font-size: 14px; color: #666;">
+      <label>
+        <input type="checkbox" id="dont-show-again"> Jangan tampilkan lagi
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Script untuk Popup -->
+<script>
+  // Tunggu hingga halaman selesai dimuat
+  document.addEventListener("DOMContentLoaded", function() {
+    // Ambil elemen popup
+    var popup = document.getElementById("simple-newsletter-popup");
+    var closeBtn = document.getElementById("close-popup");
+    var dontShowCheckbox = document.getElementById("dont-show-again");
+    
+    // Fungsi untuk menampilkan popup
+    function showPopup() {
+      // Cek apakah user sudah memilih untuk tidak menampilkan popup lagi
+      if (localStorage.getItem("dontShowNewsletterPopup") !== "true") {
+        popup.style.display = "block";
+      }
+    }
+    
+    // Fungsi untuk menutup popup
+    function closePopup() {
+      popup.style.display = "none";
+      
+      // Jika checkbox dicentang, simpan preferensi user
+      if (dontShowCheckbox.checked) {
+        localStorage.setItem("dontShowNewsletterPopup", "true");
+      }
+    }
+    
+    // Tambahkan event listener untuk tombol close
+    closeBtn.addEventListener("click", closePopup);
+    
+    // Tampilkan popup setelah 5 detik
+    setTimeout(showPopup, 5000);
+    
+    // Tutup popup jika user mengklik di luar popup
+    window.addEventListener("click", function(event) {
+      if (event.target === popup) {
+        closePopup();
+      }
+    });
+  });
+</script>
 </body>
 </html>
