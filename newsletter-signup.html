@@ -484,11 +484,11 @@
             document.getElementById('newsletter-popup').classList.add('hidden');
         }
         
-        // Show popup after 3 seconds on page load
+        // Show popup after 5 seconds on page load
         window.addEventListener('load', function() {
             setTimeout(function() {
                 openNewsletterPopup();
-            }, 3000);
+            }, 5000);
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -515,16 +515,16 @@
     }
   }
   
-  // Tampilkan popup setelah 3 detik halaman dimuat
+  // Tampilkan popup setelah 5 detik halaman dimuat
   document.addEventListener("DOMContentLoaded", function() {
     // Cek apakah ini adalah kunjungan pertama user
     if (!localStorage.getItem('popupShown')) {
-      // Tampilkan popup setelah 3 detik
+      // Tampilkan popup setelah 5 detik
       setTimeout(function() {
         showNewsletterPopup();
         // Tandai bahwa popup sudah ditampilkan
         localStorage.setItem('popupShown', 'true');
-      }, 3000); // 3000 ms = 3 detik
+      }, 5000); // 5000 ms = 5 detik
     }
     
     // Tutup popup jika user mengklik di luar popup
