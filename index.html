@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,71 +7,9 @@
     <link rel="stylesheet" href="homepage-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="css/popup_keren.css"> 
-  <style>
-#mc-embedded-subscribe {
-    width: 100%;
-    background-color: #007bff; /* Warna biru modern */
-    color: white;
-    border: none;
-    padding: 12px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-    margin-top: 10px;
-}
-
-#mc-embedded-subscribe:hover {
-    background-color: #0056b3;
-}
-
-/* Pesan Respons */
-#mce-responses {
-    margin-top: 15px;
-}
-
-#mce-error-response, #mce-success-response {
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-#mce-error-response {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-#mce-success-response {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-/* Tombol untuk menampilkan popup (jika masih digunakan) */
-#show-popup-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 20px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.2s ease;
-}
-
-#show-popup-btn:hover {
-    background-color: #0056b3;
-}
-</style>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  </head>
-<body>
+ <body>
     <!-- Header & Navigasi -->
     <header>
         <div class="container">
@@ -500,7 +437,7 @@
     </footer>
 <script src="homepage-script.js"></script>
 
-  <!-- Tombol untuk menampilkan popup -->
+   <!-- Tombol untuk menampilkan popup -->
     <button id="show-popup-btn">Berlangganan Newsletter</button>
     
     <!-- Popup Newsletter Container -->
@@ -531,7 +468,6 @@
                                 <div class="response" id="mce-success-response" style="display: none;"></div>
                             </div>
                             <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
                                 <input type="text" name="b_c2129a1737452627b9787ae20_734006bf85" tabindex="-1" value="">
                             </div>
                             <div class="optionalParent">
@@ -548,6 +484,7 @@
     </div>
 
     <!-- Script jQuery untuk menangani popup (dengan animasi) -->
+       <!-- Script jQuery untuk menangani popup (dengan animasi) -->
     <script>
         $(document).ready(function() {
             var $popup = $("#new-mailchimp-popup");
@@ -571,8 +508,6 @@
             
             // Tampilkan popup otomatis setelah beberapa detik
             setTimeout(function() {
-                // Cek apakah popup sudah pernah ditampilkan (misal, pakai cookie)
-                // Jika belum, tampilkan:
                 $popup.addClass("show");
             }, 5000); // Tampilkan setelah 5 detik
         });
