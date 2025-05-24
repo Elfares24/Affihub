@@ -1,4 +1,18 @@
-# Tambahkan di .htaccess jika menggunakan Apache
+# Mengaktifkan mod_rewrite untuk URL yang ramah SEO
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Redirect dari non-www ke www (opsional)
+    # RewriteCond %{HTTP_HOST} !^www\. [NC]
+    # RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+    
+    # Redirect dari HTTP ke HTTPS (opsional, sangat direkomendasikan)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Caching
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType image/jpg "access plus 1 year"
@@ -14,4 +28,44 @@
     ExpiresByType application/x-shockwave-flash "access plus 1 month"
     ExpiresByType image/x-icon "access plus 1 year"
     ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/x-font
+    AddOutputFilterByType DEFLATE application/x-font-opentype
+    AddOutputFilterByType DEFLATE application/x-font-otf
+    AddOutputFilterByType DEFLATE application/x-font-truetype
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+
+# Browser caching
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|webp|js|css|swf)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=7200, private, must-revalidate"
+    </FilesMatch>
+    <FilesMatch "\.(xml|txt)$">
+        Header set Cache-Control "max-age=7200, public, must-revalidate"
+    </FilesMatch>
+    <FilesMatch "\.(x?html|php)$">
+        Header set Cache-Control "private, must-revalidate"
+    </FilesMatch>
 </IfModule>
