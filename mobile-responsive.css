@@ -80,7 +80,7 @@
         padding: 10px;
     }
 
-    .main-nav ul {
+    .main-navigation .nav-links {
         flex-direction: column;
         width: 100%;
     }
