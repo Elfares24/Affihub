@@ -35,6 +35,7 @@
     <!-- CSS Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile-responsive.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
     <header>
@@ -368,6 +369,37 @@
         </div>
     </footer>
 
+    <!-- Newsletter Popup -->
+    <div class="newsletter-popup-overlay" id="newsletterPopupOverlay">
+        <div class="newsletter-popup">
+            <div class="newsletter-popup-close" id="newsletterPopupClose">
+                <i class="fas fa-times"></i>
+            </div>
+            
+            <div class="newsletter-popup-header">
+                <h3>Dapatkan Diskon Eksklusif!</h3>
+                <p>Berlangganan newsletter kami dan dapatkan diskon 20% untuk pembelian pertama Anda</p>
+            </div>
+            
+            <div class="newsletter-popup-content">
+                <form class="newsletter-popup-form" id="newsletterPopupForm">
+                    <input type="email" id="newsletterEmail" placeholder="Alamat email Anda" required>
+                    <button type="submit" class="btn btn-primary">Berlangganan Sekarang</button>
+                </form>
+                
+                <div class="newsletter-success" id="newsletterSuccess">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Terima Kasih!</h3>
+                    <p>Anda telah berhasil berlangganan newsletter kami. Kode diskon akan dikirim ke email Anda.</p>
+                </div>
+            </div>
+            
+            <div class="newsletter-popup-footer">
+                <p>Kami menghargai privasi Anda. Baca <a href="/kebijakan-privasi">Kebijakan Privasi</a> kami.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script>
         // Mobile Menu Toggle
@@ -383,5 +415,8 @@
             }
         });
     </script>
+    
+    <!-- Newsletter Popup Script -->
+    <script src="popup.js"></script>
 </body>
 </html>
