@@ -111,22 +111,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Also listen for Mailchimp's success message
-    window.addEventListener('message', function(event) {
-        if (event.data.type === 'mailchimp:subscribe:success') {
-            setCookie('newsletter_subscribed', 'true', 30);
-            
-            if (formContainer) {
-                formContainer.classList.add('hidden');
-            }
-            if (successMessage) {
-                successMessage.classList.add('active');
-            }
-            
-            // Close popup after 3 seconds
-            setTimeout(function() {
-                hidePopup();
-            }, 3000);
-        }
-    });
+
 });

@@ -92,7 +92,7 @@
 }
 
 .form-container.hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Mailchimp Form Overrides */
