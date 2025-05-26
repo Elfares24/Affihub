@@ -1,9 +1,11 @@
-// Newsletter Popup JavaScript with Mailchimp Integration
+// Newsletter Popup JavaScript with Mailchimp Integration - Fixed Version
 document.addEventListener('DOMContentLoaded', function() {
     // Elements
     const popupOverlay = document.getElementById('newsletterPopupOverlay');
     const popupCloseBtn = document.getElementById('newsletterPopupClose');
     const popupForm = document.getElementById('mc-embedded-subscribe-form');
+    const formContainer = document.getElementById('formContainer');
+    const successMessage = document.getElementById('newsletterSuccess');
     
     // Show popup after 5 seconds
     setTimeout(function() {
@@ -73,26 +75,58 @@ document.addEventListener('DOMContentLoaded', function() {
         return null;
     }
     
-    // Handle successful form submission
-    window.addEventListener('message', function(event) {
-        if (event.data.type === 'mailchimp:subscribe:success') {
+    // Handle form submission
+    if (popupForm) {
+        popupForm.addEventListener('submit', function(e) {
+            // We don't prevent default because we want the form to submit to Mailchimp
+            
+            // Set cookie to remember user subscribed
             setCookie('newsletter_subscribed', 'true', 30);
             
-            // Show success message
-            const successMessage = document.getElementById('newsletterSuccess');
-            if (successMessage) {
-                successMessage.classList.add('active');
-                
-                // Hide the form
-                if (popupForm) {
-                    popupForm.style.display = 'none';
+            // Hide form and show success message after a short delay
+            // This ensures the form data is sent before we hide it
+            setTimeout(function() {
+                if (formContainer) {
+                    formContainer.classList.add('hidden');
+                }
+                if (successMessage) {
+                    successMessage.classList.add('active');
                 }
                 
                 // Close popup after 3 seconds
                 setTimeout(function() {
                     hidePopup();
+                    
+                    // Reset form state for future visits (though cookie will prevent showing again)
+                    setTimeout(function() {
+                        if (formContainer) {
+                            formContainer.classList.remove('hidden');
+                        }
+                        if (successMessage) {
+                            successMessage.classList.remove('active');
+                        }
+                    }, 1000);
                 }, 3000);
+            }, 1000);
+        });
+    }
+    
+    // Also listen for Mailchimp's success message
+    window.addEventListener('message', function(event) {
+        if (event.data.type === 'mailchimp:subscribe:success') {
+            setCookie('newsletter_subscribed', 'true', 30);
+            
+            if (formContainer) {
+                formContainer.classList.add('hidden');
             }
+            if (successMessage) {
+                successMessage.classList.add('active');
+            }
+            
+            // Close popup after 3 seconds
+            setTimeout(function() {
+                hidePopup();
+            }, 3000);
         }
     });
 });
