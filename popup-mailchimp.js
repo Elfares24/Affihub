@@ -1,4 +1,3 @@
-// Newsletter Popup JavaScript with Mailchimp Integration - Fixed Version
 document.addEventListener('DOMContentLoaded', function() {
     // Elements
     const popupOverlay = document.getElementById('newsletterPopupOverlay');
@@ -6,64 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupForm = document.getElementById('mc-embedded-subscribe-form');
     const formContainer = document.getElementById('formContainer');
     const successMessage = document.getElementById('newsletterSuccess');
-    
-    // Show popup after 5 seconds
-    setTimeout(function() {
-        showPopup();
-    }, 5000);
-    
-    // Show popup when user scrolls to bottom
-    window.addEventListener('scroll', function() {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
-            showPopup();
-        }
-    });
-    
-    // Close popup when clicking close button
-    if (popupCloseBtn) {
-        popupCloseBtn.addEventListener('click', function() {
-            hidePopup();
-            // Set cookie to remember user closed popup
-            setCookie('newsletter_popup_closed', 'true', 7);
-        });
-    }
-    
-    // Close popup when clicking outside
-    if (popupOverlay) {
-        popupOverlay.addEventListener('click', function(e) {
-            if (e.target === popupOverlay) {
-                hidePopup();
-                setCookie('newsletter_popup_closed', 'true', 7);
-            }
-        });
-    }
-    
-    // Helper functions
-    function showPopup() {
-        // Only show if user hasn't closed it before or already subscribed
-        if (!getCookie('newsletter_popup_closed') && !getCookie('newsletter_subscribed')) {
-            if (popupOverlay) {
-                popupOverlay.classList.add('active');
-            }
-        }
-    }
-    
-    function hidePopup() {
-        if (popupOverlay) {
-            popupOverlay.classList.remove('active');
-        }
-    }
-    
-    function setCookie(name, value, days) {
-        let expires = '';
-        if (days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = '; expires=' + date.toUTCString();
-        }
-        document.cookie = name + '=' + (value || '') + expires + '; path=/';
-    }
-    
+
+    let popupShown = false; // Flag to track if popup logic has run
+    let scrollTimeout; // Timeout variable for debounce
+
+    // --- Helper Functions ---
     function getCookie(name) {
         const nameEQ = name + '=';
         const ca = document.cookie.split(';');
@@ -74,42 +20,97 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return null;
     }
-    
+
+    function setCookie(name, value, days) {
+        let expires = '';
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = '; expires=' + date.toUTCString();
+        }
+        document.cookie = name + '=' + (value || '') + expires + '; path=/';
+    }
+
+    function showPopup() {
+        // Only run logic if it hasn't run before
+        if (popupShown) return;
+
+        // Check cookies
+        if (!getCookie('newsletter_popup_closed') && !getCookie('newsletter_subscribed')) {
+            if (popupOverlay) {
+                popupOverlay.classList.add('active');
+                popupShown = true; // Set flag: popup logic has run
+            }
+        } else {
+             // If cookies prevent showing, still mark as shown to prevent future checks
+             popupShown = true;
+        }
+    }
+
+    function hidePopup() {
+        if (popupOverlay) {
+            popupOverlay.classList.remove('active');
+        }
+    }
+
+    // --- Event Listeners & Triggers ---
+
+    // Trigger 1: Show popup after 5 seconds
+    setTimeout(showPopup, 5000);
+
+    // Trigger 2: Show popup when user scrolls near bottom (debounced)
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            // Check if near bottom and popup logic hasn't run yet
+            if (!popupShown && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+                showPopup();
+            }
+        }, 250); // Debounce delay: 250ms
+    });
+
+    // Close popup when clicking close button
+    if (popupCloseBtn) {
+        popupCloseBtn.addEventListener('click', function() {
+            hidePopup();
+            setCookie('newsletter_popup_closed', 'true', 7);
+            popupShown = true; // Mark as shown/interacted to prevent re-triggering
+        });
+    }
+
+    // Close popup when clicking outside
+    if (popupOverlay) {
+        popupOverlay.addEventListener('click', function(e) {
+            if (e.target === popupOverlay) {
+                hidePopup();
+                setCookie('newsletter_popup_closed', 'true', 7);
+                popupShown = true; // Mark as shown/interacted to prevent re-triggering
+            }
+        });
+    }
+
     // Handle form submission
     if (popupForm) {
         popupForm.addEventListener('submit', function(e) {
-            // We don't prevent default because we want the form to submit to Mailchimp
-            
             // Set cookie to remember user subscribed
             setCookie('newsletter_subscribed', 'true', 30);
-            
+            popupShown = true; // Mark as shown/interacted
+
             // Hide form and show success message after a short delay
-            // This ensures the form data is sent before we hide it
             setTimeout(function() {
-                if (formContainer) {
-                    formContainer.classList.add('hidden');
-                }
-                if (successMessage) {
-                    successMessage.classList.add('active');
-                }
-                
+                if (formContainer) formContainer.classList.add('hidden');
+                if (successMessage) successMessage.classList.add('active');
+
                 // Close popup after 3 seconds
                 setTimeout(function() {
                     hidePopup();
-                    
-                    // Reset form state for future visits (though cookie will prevent showing again)
+                    // Reset form state for potential future logic (though cookie prevents showing)
                     setTimeout(function() {
-                        if (formContainer) {
-                            formContainer.classList.remove('hidden');
-                        }
-                        if (successMessage) {
-                            successMessage.classList.remove('active');
-                        }
+                        if (formContainer) formContainer.classList.remove('hidden');
+                        if (successMessage) successMessage.classList.remove('active');
                     }, 1000);
                 }, 3000);
             }, 1000);
         });
     }
-    
-
 });
