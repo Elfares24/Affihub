@@ -1,116 +1,76 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Elements
     const popupOverlay = document.getElementById('newsletterPopupOverlay');
-    const popupCloseBtn = document.getElementById('newsletterPopupClose');
-    const popupForm = document.getElementById('mc-embedded-subscribe-form');
+    const popupCloseButton = document.getElementById('newsletterPopupClose');
+    const mailchimpForm = document.getElementById('mc-embedded-subscribe-form');
     const formContainer = document.getElementById('formContainer');
     const successMessage = document.getElementById('newsletterSuccess');
 
-    let popupShown = false; // Flag to track if popup logic has run
-    let scrollTimeout; // Timeout variable for debounce
+    // --- Configuration ---
+    const POPUP_DELAY = 3000; // 3 seconds
+    // Note: Showing popup *every* visit is handled by not setting a cookie.
 
-    // --- Helper Functions ---
-    function getCookie(name) {
-        const nameEQ = name + '=';
-        const ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-
-    function setCookie(name, value, days) {
-        let expires = '';
-        if (days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = '; expires=' + date.toUTCString();
-        }
-        document.cookie = name + '=' + (value || '') + expires + '; path=/';
-    }
-
+    // Function to show the popup
     function showPopup() {
-        // Only run logic if it hasn't run before
-        if (popupShown) return;
-
-        // Check cookies
-        if (!getCookie('newsletter_popup_closed') && !getCookie('newsletter_subscribed')) {
-            if (popupOverlay) {
-                popupOverlay.classList.add('active');
-                popupShown = true; // Set flag: popup logic has run
-            }
-        } else {
-             // If cookies prevent showing, still mark as shown to prevent future checks
-             popupShown = true;
+        if (popupOverlay) {
+            popupOverlay.classList.add('active');
+            document.body.classList.add('popup-open'); // Optional: Prevent background scroll
         }
     }
 
+    // Function to hide the popup
     function hidePopup() {
         if (popupOverlay) {
             popupOverlay.classList.remove('active');
+            document.body.classList.remove('popup-open');
         }
     }
 
-    // --- Event Listeners & Triggers ---
+    // Show popup after delay
+    setTimeout(showPopup, POPUP_DELAY);
 
-    // Trigger 1: Show popup after 5 seconds
-    setTimeout(showPopup, 5000);
-
-    // Trigger 2: Show popup when user scrolls near bottom (debounced)
-    window.addEventListener('scroll', function() {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(function() {
-            // Check if near bottom and popup logic hasn't run yet
-            if (!popupShown && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
-                showPopup();
-            }
-        }, 250); // Debounce delay: 250ms
-    });
-
-    // Close popup when clicking close button
-    if (popupCloseBtn) {
-        popupCloseBtn.addEventListener('click', function() {
-            hidePopup();
-            setCookie('newsletter_popup_closed', 'true', 7);
-            popupShown = true; // Mark as shown/interacted to prevent re-triggering
-        });
+    // Hide popup when close button is clicked
+    if (popupCloseButton) {
+        popupCloseButton.addEventListener('click', hidePopup);
     }
 
-    // Close popup when clicking outside
+    // Hide popup when clicking outside the popup content (on the overlay)
     if (popupOverlay) {
-        popupOverlay.addEventListener('click', function(e) {
-            if (e.target === popupOverlay) {
+        popupOverlay.addEventListener('click', function(event) {
+            // Check if the click is directly on the overlay, not the popup itself
+            if (event.target === popupOverlay) {
                 hidePopup();
-                setCookie('newsletter_popup_closed', 'true', 7);
-                popupShown = true; // Mark as shown/interacted to prevent re-triggering
             }
         });
     }
 
-    // Handle form submission
-    if (popupForm) {
-        popupForm.addEventListener('submit', function(e) {
-            // Set cookie to remember user subscribed
-            setCookie('newsletter_subscribed', 'true', 30);
-            popupShown = true; // Mark as shown/interacted
+    // Optional: Handle Mailchimp success message display
+    // Mailchimp's mc-validate.js might handle this, but we can add custom logic if needed.
+    // This basic example assumes you might want to show a custom success message
+    // within the popup after a successful submission *if* Mailchimp doesn't redirect.
+    // Mailchimp forms often redirect or show messages within their own structure.
+    // We'll monitor the Mailchimp response div for changes.
 
-            // Hide form and show success message after a short delay
-            setTimeout(function() {
-                if (formContainer) formContainer.classList.add('hidden');
-                if (successMessage) successMessage.classList.add('active');
+    const mailchimpResponseDiv = document.getElementById('mce-success-response');
 
-                // Close popup after 3 seconds
-                setTimeout(function() {
-                    hidePopup();
-                    // Reset form state for potential future logic (though cookie prevents showing)
-                    setTimeout(function() {
-                        if (formContainer) formContainer.classList.remove('hidden');
-                        if (successMessage) successMessage.classList.remove('active');
-                    }, 1000);
-                }, 3000);
-            }, 1000);
+    if (mailchimpForm && mailchimpResponseDiv && formContainer && successMessage) {
+        // Use MutationObserver to detect when Mailchimp adds success message
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mailchimpResponseDiv.style.display !== 'none' && mailchimpResponseDiv.innerHTML.trim() !== '') {
+                    // Mailchimp success message is visible
+                    formContainer.style.display = 'none'; // Hide the form
+                    successMessage.style.display = 'block'; // Show our custom success message
+
+                    // Optional: Automatically close popup after a few seconds
+                    // setTimeout(hidePopup, 5000); // Close after 5 seconds
+                }
+            });
         });
+
+        // Configure and start the observer
+        const config = { attributes: true, childList: true, characterData: true, subtree: true };
+        observer.observe(mailchimpResponseDiv, config);
     }
+
 });
+
