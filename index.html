@@ -44,80 +44,40 @@
 </head>
 <body>
     <header>
-<!-- Header Redesign - Mobile First -->
-    <header class="header-redesign">
-    <!-- Mobile & Desktop Navigation -->
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-container">
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="/">
-                        <img src="https://via.placeholder.com/180x40" alt="AutomarketHub Logo" width="180" height="40">
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu Toggle -->
-                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-                
-                <!-- Navigation Links -->
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="/">Beranda</a></li>
-                    <li><a href="/products.html">Produk</a></li>
-                    <li><a href="/ulasan.html">Ulasan</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/contact.html">Kontak</a></li>
-                    <li><a href="/about.html">Tentang Kami</a></li>
-                </ul>
-                
-                <!-- Search Icon -->
-                <div class="search-icon">
-                    <i class="fas fa-search" id="searchToggle"></i>
-                    <div class="search-form" id="searchForm">
-                        <form action="/search" method="get">
-                            <input type="text" name="q" placeholder="Cari produk...">
-                            <button type="submit"><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-                </div>
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="/">Home</a> &gt; 
+                <a href="/kategori/software-ai">Software AI</a> &gt; 
+                <span>Super AI Review</span>
             </div>
         </div>
-    </nav>
-</header>
 
-<!-- Mobile Menu Overlay -->
-<div class="mobile-menu-overlay" id="mobileMenuOverlay">
-    <div class="mobile-menu-container">
-        <div class="mobile-menu-header">
-            <div class="logo">
-                <a href="/">
-                    <img src="https://via.placeholder.com/180x40" alt="AutomarketHub Logo" width="180" height="40">
-                </a>
+        <!-- Navigation -->
+        <nav class="main-navigation">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="https://via.placeholder.com/180x40" alt="AutomarketHub Logo" width="180" height="40">
+                        </a>
+                    </div>
+                    
+                    <button class="mobile-menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="/">Beranda</a></li>
+                        <li><a href="/products.html">Produk</a></li>
+                        <li><a href="/ulasan.html">Ulasan</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contact.html">Kontak</a></li>
+                    </ul>
+                </div>
             </div>
-            <button class="close-menu" id="closeMenu">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="/">Beranda</a></li>
-            <li><a href="/products.html">Produk</a></li>
-            <li><a href="/ulasan.html">Ulasan</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/contact.html">Kontak</a></li>
-            <li><a href="/about.html">Tentang Kami</a></li>
-        </ul>
-        <div class="mobile-search">
-            <form action="/search" method="get">
-                <input type="text" name="q" placeholder="Cari produk...">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
-    </div>
-</div>
         </nav>
     </header>
+
 
     <main>
         <!-- Hero Section -->
