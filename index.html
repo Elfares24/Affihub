@@ -33,7 +33,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fixed_mobile_styles.css">
     <link rel="stylesheet" href="mobile-responsive.css">
     <link rel="stylesheet" href="popup-mailchimp.css"> 
 
@@ -905,5 +905,16 @@
     
     <!-- Newsletter Popup Script -->
     <script src="popup-mailchimp.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  
+  menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+  });
+});
+</script>
+
 </body>
 </html>
