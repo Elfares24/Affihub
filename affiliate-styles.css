@@ -1,0 +1,168 @@
+<!-- Blok Afiliasi Multi-Platform -->
+<div class="multi-affiliate-block">
+  <h3 class="affiliate-heading">Dapatkan Produk Ini di:</h3>
+  
+  <div class="affiliate-options">
+    <!-- Opsi Afiliasi 1: Website Resmi -->
+    <a href="[LINK_AFILIASI_RESMI]" class="affiliate-card official" target="_blank" rel="nofollow">
+      <div class="affiliate-logo">
+        <img src="path/to/official-logo.png" alt="Website Resmi">
+      </div>
+      <div class="affiliate-info">
+        <span class="affiliate-platform">Website Resmi</span>
+        <span class="affiliate-price">Rp 1.499.000</span>
+        <span class="affiliate-cta">Beli Sekarang</span>
+      </div>
+    </a>
+    
+    <!-- Opsi Afiliasi 2: Shopee -->
+    <a href="[LINK_AFILIASI_SHOPEE]" class="affiliate-card shopee" target="_blank" rel="nofollow">
+      <div class="affiliate-logo">
+        <img src="path/to/shopee-logo.png" alt="Shopee">
+      </div>
+      <div class="affiliate-info">
+        <span class="affiliate-platform">Shopee</span>
+        <span class="affiliate-price">Rp 1.450.000</span>
+        <span class="affiliate-cta">Beli di Shopee</span>
+      </div>
+    </a>
+    
+    <!-- Opsi Afiliasi 3: Tokopedia -->
+    <a href="[LINK_AFILIASI_TOKOPEDIA]" class="affiliate-card tokopedia" target="_blank" rel="nofollow">
+      <div class="affiliate-logo">
+        <img src="path/to/tokopedia-logo.png" alt="Tokopedia">
+      </div>
+      <div class="affiliate-info">
+        <span class="affiliate-platform">Tokopedia</span>
+        <span class="affiliate-price">Rp 1.475.000</span>
+        <span class="affiliate-cta">Beli di Tokopedia</span>
+      </div>
+    </a>
+  </div>
+  
+  <p class="affiliate-disclaimer">Sebagai afiliasi, kami mungkin menerima komisi dari pembelian melalui link di atas tanpa biaya tambahan untuk Anda.</p>
+</div>
+/* Styling untuk Blok Afiliasi Multi-Platform */
+.multi-affiliate-block {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.affiliate-heading {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.affiliate-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.affiliate-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #e1e1e1;
+}
+
+.affiliate-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.affiliate-logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.affiliate-logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.affiliate-info {
+  flex: 1;
+}
+
+.affiliate-platform {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.affiliate-price {
+  display: block;
+  color: #e63946;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.affiliate-cta {
+  display: inline-block;
+  background-color: #0056b3;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+}
+
+.affiliate-card:hover .affiliate-cta {
+  background-color: #004494;
+}
+
+.affiliate-disclaimer {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+/* Styling khusus per platform */
+.affiliate-card.official {
+  border-left: 4px solid #28a745;
+}
+
+.affiliate-card.shopee {
+  border-left: 4px solid #ee4d2d;
+}
+
+.affiliate-card.tokopedia {
+  border-left: 4px solid #42b549;
+}
+
+/* Responsif untuk tablet dan desktop */
+@media (min-width: 768px) {
+  .affiliate-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .affiliate-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .affiliate-logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+  }
+}
